@@ -1,12 +1,12 @@
 {
   "name": "inty",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The official TypeScript library for the Inty API",
   "author": "Inty <>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",
-  "repository": "github:stainless-sdks/inty-typescript",
+  "repository": "github:NascentCore/inty-typescript",
   "license": "Apache-2.0",
   "packageManager": "yarn@1.22.22",
   "files": [
