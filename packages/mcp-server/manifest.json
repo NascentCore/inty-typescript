@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stainless-sdks/inty-typescript.git"
+    "url": "git+https://github.com/NascentCore/inty-typescript.git"
   },
-  "homepage": "https://github.com/stainless-sdks/inty-typescript/tree/main/packages/mcp-server#readme",
+  "homepage": "https://github.com/NascentCore/inty-typescript/tree/main/packages/mcp-server#readme",
   "documentation": "",
   "server": {
     "type": "node",
