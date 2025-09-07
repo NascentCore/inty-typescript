@@ -131,7 +131,7 @@ export class Inty {
    * API Client for interfacing with the Inty API.
    *
    * @param {string | undefined} [opts.apiKey=process.env['INTY_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['INTY_BASE_URL'] ?? https://api.example.com] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['INTY_BASE_URL'] ?? https://app.inty.cc] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {MergedRequestInit} [opts.fetchOptions] - Additional `RequestInit` options to be passed to `fetch` calls.
    * @param {Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -153,7 +153,7 @@ export class Inty {
     const options: ClientOptions = {
       apiKey,
       ...opts,
-      baseURL: baseURL || `https://api.example.com`,
+      baseURL: baseURL || `https://app.inty.cc`,
     };
 
     this.baseURL = options.baseURL!;
@@ -199,7 +199,7 @@ export class Inty {
    * Check whether the base URL is set to its default.
    */
   #baseURLOverridden(): boolean {
-    return this.baseURL !== 'https://api.example.com';
+    return this.baseURL !== 'https://app.inty.cc';
   }
 
   /**
