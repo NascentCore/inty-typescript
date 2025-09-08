@@ -24,7 +24,8 @@ export class Agents extends APIResource {
   }
 
   /**
-   * Get chat settings by Agent ID
+   * Get chat settings by Agent ID, bause we only support 1 chat per agent, so we do
+   * not use chat_id to get settings
    *
    * @example
    * ```ts
