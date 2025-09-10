@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1 (2025-09-10)
+
+Full Changelog: [v0.2.0...v0.2.1](https://github.com/NascentCore/inty-typescript/compare/v0.2.0...v0.2.1)
+
+### Bug Fixes
+
+* coerce nullable values to undefined ([325ea44](https://github.com/NascentCore/inty-typescript/commit/325ea44be9970919d2a5f666b510234b167aa2cd))
+
 ## 0.2.0 (2025-09-08)
 
 Full Changelog: [v0.1.0...v0.2.0](https://github.com/NascentCore/inty-typescript/compare/v0.1.0...v0.2.0)
