@@ -210,6 +210,8 @@ export interface Agent {
    */
   creator_notes?: string | null;
 
+  deleted_at?: number | null;
+
   extensions?: { [key: string]: unknown } | null;
 
   follower_count?: number;
@@ -239,6 +241,8 @@ export interface Agent {
   mode_prompt?: string | null;
 
   opening?: string | null;
+
+  opening_audio_url?: string | null;
 
   /**
    * 角色性格特点 (推荐)
@@ -412,6 +416,8 @@ export interface AgentCreateParams {
 
   opening?: string | null;
 
+  opening_audio_url?: string | null;
+
   /**
    * 角色性格特点 (推荐)
    */
@@ -482,6 +488,8 @@ export interface AgentUpdateParams {
   name?: string | null;
 
   opening?: string | null;
+
+  opening_audio_url?: string | null;
 
   personality?: string | null;
 

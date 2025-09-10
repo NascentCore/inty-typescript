@@ -98,6 +98,11 @@ export namespace VersionCheckResponse {
     error?: string | null;
 
     /**
+     * 强制更新的具体原因列表
+     */
+    force_update_reasons?: Array<string> | null;
+
+    /**
      * 最新版本代码
      */
     latest_version_code?: number | null;
