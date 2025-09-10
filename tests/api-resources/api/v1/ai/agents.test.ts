@@ -51,6 +51,7 @@ describe('resource agents', () => {
       message_example: 'message_example',
       mode_prompt: 'mode_prompt',
       opening: 'opening',
+      opening_audio_url: 'opening_audio_url',
       personality: 'personality',
       photos: ['string'],
       post_history_instructions: 'post_history_instructions',

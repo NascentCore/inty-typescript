@@ -429,11 +429,6 @@ export namespace SubscriptionVerifyResponse {
    */
   export interface Data {
     /**
-     * @deprecated 是否有效，使用 is_verified 代替
-     */
-    is_valid: boolean;
-
-    /**
      * 是否有效
      */
     is_verified: boolean;
