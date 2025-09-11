@@ -1,8 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../../../core/resource';
-import * as AgentsAPI from './agents';
-import * as ReportAPI from '../report';
 import { APIPromise } from '../../../../core/api-promise';
 import { RequestOptions } from '../../../../internal/request-options';
 import { path } from '../../../../internal/utils/path';
@@ -48,39 +46,6 @@ export class Agents extends APIResource {
   ): APIPromise<unknown> {
     return this._client.get(path`/api/v1/chats/agents/${agentID}/messages`, { query, ...options });
   }
-
-  /**
-   * Get chat settings by Agent ID, bause we only support 1 chat per agent, so we do
-   * not use chat_id to get settings
-   *
-   * @example
-   * ```ts
-   * const chatSettings =
-   *   await client.api.v1.chats.agents.getSettings('agent_id');
-   * ```
-   */
-  getSettings(agentID: string, options?: RequestOptions): APIPromise<ChatSettings> {
-    return this._client.get(path`/api/v1/chats/agents/${agentID}/settings`, options);
-  }
-
-  /**
-   * Update chat settings by Agent ID
-   *
-   * @example
-   * ```ts
-   * const response =
-   *   await client.api.v1.chats.agents.updateChatSettings(
-   *     'agent_id',
-   *   );
-   * ```
-   */
-  updateChatSettings(
-    agentID: string,
-    body: AgentUpdateChatSettingsParams,
-    options?: RequestOptions,
-  ): APIPromise<AgentUpdateChatSettingsResponse> {
-    return this._client.put(path`/api/v1/chats/agents/${agentID}/settings`, { body, ...options });
-  }
 }
 
 /**
@@ -112,23 +77,6 @@ export type AgentGenerateMessageVoiceResponse = unknown;
 
 export type AgentGetMessagesResponse = unknown;
 
-export type AgentUpdateChatSettingsResponse =
-  | AgentUpdateChatSettingsResponse.APIResponseChatSettings
-  | ReportAPI.APIResponseDict;
-
-export namespace AgentUpdateChatSettingsResponse {
-  export interface APIResponseChatSettings {
-    code?: number;
-
-    /**
-     * 聊天设置
-     */
-    data?: AgentsAPI.ChatSettings | null;
-
-    message?: string;
-  }
-}
-
 export interface AgentGenerateMessageVoiceParams {
   /**
    * Path param:
@@ -158,24 +106,12 @@ export interface AgentGetMessagesParams {
   order?: string;
 }
 
-export interface AgentUpdateChatSettingsParams {
-  language?: string | null;
-
-  premium_mode?: boolean | null;
-
-  style_prompt?: string | null;
-
-  voice_enabled?: boolean | null;
-}
-
 export declare namespace Agents {
   export {
     type ChatSettings as ChatSettings,
     type AgentGenerateMessageVoiceResponse as AgentGenerateMessageVoiceResponse,
     type AgentGetMessagesResponse as AgentGetMessagesResponse,
-    type AgentUpdateChatSettingsResponse as AgentUpdateChatSettingsResponse,
     type AgentGenerateMessageVoiceParams as AgentGenerateMessageVoiceParams,
     type AgentGetMessagesParams as AgentGetMessagesParams,
-    type AgentUpdateChatSettingsParams as AgentUpdateChatSettingsParams,
   };
 }

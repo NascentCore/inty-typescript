@@ -8,8 +8,6 @@ import {
   AgentGenerateMessageVoiceResponse,
   AgentGetMessagesParams,
   AgentGetMessagesResponse,
-  AgentUpdateChatSettingsParams,
-  AgentUpdateChatSettingsResponse,
   Agents,
   ChatSettings,
 } from './agents';
@@ -158,9 +156,7 @@ export declare namespace Chats {
     type ChatSettings as ChatSettings,
     type AgentGenerateMessageVoiceResponse as AgentGenerateMessageVoiceResponse,
     type AgentGetMessagesResponse as AgentGetMessagesResponse,
-    type AgentUpdateChatSettingsResponse as AgentUpdateChatSettingsResponse,
     type AgentGenerateMessageVoiceParams as AgentGenerateMessageVoiceParams,
     type AgentGetMessagesParams as AgentGetMessagesParams,
-    type AgentUpdateChatSettingsParams as AgentUpdateChatSettingsParams,
   };
 }

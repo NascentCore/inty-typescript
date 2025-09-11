@@ -3,9 +3,7 @@
 import { APIResource } from '../../../core/resource';
 import * as DeviceAPI from './users/device';
 import { APIPromise } from '../../../core/api-promise';
-import { type Uploadable } from '../../../core/uploads';
 import { RequestOptions } from '../../../internal/request-options';
-import { multipartFormRequestOptions } from '../../../internal/uploads';
 
 export class Report extends APIResource {
   /**
@@ -22,25 +20,6 @@ export class Report extends APIResource {
    */
   create(body: ReportCreateParams, options?: RequestOptions): APIPromise<DeviceAPI.APIResponse> {
     return this._client.post('/api/v1/report/', { body, ...options });
-  }
-
-  /**
-   * Used by app to upload image in their report of app content: AI characters,
-   * images, etc.
-   *
-   * @example
-   * ```ts
-   * const apiResponseDict =
-   *   await client.api.v1.report.uploadImage({
-   *     file: fs.createReadStream('path/to/file'),
-   *   });
-   * ```
-   */
-  uploadImage(body: ReportUploadImageParams, options?: RequestOptions): APIPromise<APIResponseDict> {
-    return this._client.post(
-      '/api/v1/report/upload-image',
-      multipartFormRequestOptions({ body, ...options }, this._client),
-    );
   }
 }
 
@@ -64,14 +43,6 @@ export interface ReportCreateParams {
   image_urls?: Array<string> | null;
 }
 
-export interface ReportUploadImageParams {
-  file: Uploadable;
-}
-
 export declare namespace Report {
-  export {
-    type APIResponseDict as APIResponseDict,
-    type ReportCreateParams as ReportCreateParams,
-    type ReportUploadImageParams as ReportUploadImageParams,
-  };
+  export { type APIResponseDict as APIResponseDict, type ReportCreateParams as ReportCreateParams };
 }
