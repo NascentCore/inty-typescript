@@ -2,7 +2,7 @@
 
 import { APIResource } from '../../../core/resource';
 import * as ReportAPI from './report';
-import { APIResponseDict, Report, ReportCreateParams, ReportUploadImageParams } from './report';
+import { APIResponseDict, Report, ReportCreateParams } from './report';
 import * as SettingsAPI from './settings';
 import { SettingUpdateParams, Settings } from './settings';
 import * as VersionAPI from './version';
@@ -184,7 +184,6 @@ export declare namespace V1 {
     Report as Report,
     type APIResponseDict as APIResponseDict,
     type ReportCreateParams as ReportCreateParams,
-    type ReportUploadImageParams as ReportUploadImageParams,
   };
 
   export { AI as AI };
