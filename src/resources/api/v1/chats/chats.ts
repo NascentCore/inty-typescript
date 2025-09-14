@@ -3,14 +3,7 @@
 import { APIResource } from '../../../../core/resource';
 import * as ReportAPI from '../report';
 import * as AgentsAPI from './agents';
-import {
-  AgentGenerateMessageVoiceParams,
-  AgentGenerateMessageVoiceResponse,
-  AgentGetMessagesParams,
-  AgentGetMessagesResponse,
-  Agents,
-  ChatSettings,
-} from './agents';
+import { AgentGetMessagesParams, AgentGetMessagesResponse, Agents, ChatSettings } from './agents';
 import { APIPromise } from '../../../../core/api-promise';
 import { RequestOptions } from '../../../../internal/request-options';
 import { path } from '../../../../internal/utils/path';
@@ -154,9 +147,7 @@ export declare namespace Chats {
   export {
     Agents as Agents,
     type ChatSettings as ChatSettings,
-    type AgentGenerateMessageVoiceResponse as AgentGenerateMessageVoiceResponse,
     type AgentGetMessagesResponse as AgentGetMessagesResponse,
-    type AgentGenerateMessageVoiceParams as AgentGenerateMessageVoiceParams,
     type AgentGetMessagesParams as AgentGetMessagesParams,
   };
 }

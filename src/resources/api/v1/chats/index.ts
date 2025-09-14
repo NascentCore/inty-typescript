@@ -3,9 +3,7 @@
 export {
   Agents,
   type ChatSettings,
-  type AgentGenerateMessageVoiceResponse,
   type AgentGetMessagesResponse,
-  type AgentGenerateMessageVoiceParams,
   type AgentGetMessagesParams,
 } from './agents';
 export {
