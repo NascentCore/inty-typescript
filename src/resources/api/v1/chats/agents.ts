@@ -7,30 +7,6 @@ import { path } from '../../../../internal/utils/path';
 
 export class Agents extends APIResource {
   /**
-   * Generate voice for a message
-   *
-   * @example
-   * ```ts
-   * const response =
-   *   await client.api.v1.chats.agents.generateMessageVoice(
-   *     'message_id',
-   *     { agent_id: 'agent_id' },
-   *   );
-   * ```
-   */
-  generateMessageVoice(
-    messageID: string,
-    params: AgentGenerateMessageVoiceParams,
-    options?: RequestOptions,
-  ): APIPromise<unknown> {
-    const { agent_id, language } = params;
-    return this._client.post(path`/api/v1/chats/agents/${agent_id}/messages/${messageID}/voice`, {
-      query: { language },
-      ...options,
-    });
-  }
-
-  /**
    * Get only chat message records by Agent ID (lighter interface)
    *
    * @example
@@ -73,21 +49,7 @@ export interface ChatSettings {
   voice_enabled?: boolean;
 }
 
-export type AgentGenerateMessageVoiceResponse = unknown;
-
 export type AgentGetMessagesResponse = unknown;
-
-export interface AgentGenerateMessageVoiceParams {
-  /**
-   * Path param:
-   */
-  agent_id: string;
-
-  /**
-   * Query param: 语言代码
-   */
-  language?: string;
-}
 
 export interface AgentGetMessagesParams {
   /**
@@ -109,9 +71,7 @@ export interface AgentGetMessagesParams {
 export declare namespace Agents {
   export {
     type ChatSettings as ChatSettings,
-    type AgentGenerateMessageVoiceResponse as AgentGenerateMessageVoiceResponse,
     type AgentGetMessagesResponse as AgentGetMessagesResponse,
-    type AgentGenerateMessageVoiceParams as AgentGenerateMessageVoiceParams,
     type AgentGetMessagesParams as AgentGetMessagesParams,
   };
 }
