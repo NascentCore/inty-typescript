@@ -24,7 +24,6 @@ export {
 } from './subscription/index';
 export {
   TextToSpeech,
-  type TextToSpeechGenerateSpeechResponse,
   type TextToSpeechListVoicesResponse,
   type TextToSpeechListVoicesParams,
 } from './text-to-speech';

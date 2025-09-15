@@ -3,24 +3,8 @@
 import { APIResource } from '../../../core/resource';
 import { APIPromise } from '../../../core/api-promise';
 import { RequestOptions } from '../../../internal/request-options';
-import { path } from '../../../internal/utils/path';
 
 export class TextToSpeech extends APIResource {
-  /**
-   * Generate voice for a message
-   *
-   * @example
-   * ```ts
-   * const response =
-   *   await client.api.v1.textToSpeech.generateSpeech(
-   *     'message_id',
-   *   );
-   * ```
-   */
-  generateSpeech(messageID: string, options?: RequestOptions): APIPromise<unknown> {
-    return this._client.post(path`/api/v1/text-to-speech/messages/${messageID}`, options);
-  }
-
   /**
    * 获取 ElevenLabs 可用音色列表，支持搜索和过滤功能
    *
@@ -37,8 +21,6 @@ export class TextToSpeech extends APIResource {
     return this._client.get('/api/v1/text-to-speech/list-voices', { query, ...options });
   }
 }
-
-export type TextToSpeechGenerateSpeechResponse = unknown;
 
 export type TextToSpeechListVoicesResponse = Array<{ [key: string]: unknown }>;
 
@@ -66,7 +48,6 @@ export interface TextToSpeechListVoicesParams {
 
 export declare namespace TextToSpeech {
   export {
-    type TextToSpeechGenerateSpeechResponse as TextToSpeechGenerateSpeechResponse,
     type TextToSpeechListVoicesResponse as TextToSpeechListVoicesResponse,
     type TextToSpeechListVoicesParams as TextToSpeechListVoicesParams,
   };
