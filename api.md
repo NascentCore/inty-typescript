@@ -211,11 +211,14 @@ Types:
 - <code><a href="./src/resources/api/v1/chats/agents.ts">ChatSettings</a></code>
 - <code><a href="./src/resources/api/v1/chats/agents.ts">AgentGenerateMessageVoiceResponse</a></code>
 - <code><a href="./src/resources/api/v1/chats/agents.ts">AgentGetMessagesResponse</a></code>
+- <code><a href="./src/resources/api/v1/chats/agents.ts">AgentUpdateSettingsResponse</a></code>
 
 Methods:
 
 - <code title="post /api/v1/chats/agents/{agent_id}/messages/{message_id}/voice">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">generateMessageVoice</a>(messageID, { ...params }) -> unknown</code>
 - <code title="get /api/v1/chats/agents/{agent_id}/messages">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">getMessages</a>(agentID, { ...params }) -> unknown</code>
+- <code title="get /api/v1/chats/agents/{agent_id}/settings">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">getSettings</a>(agentID) -> ChatSettings</code>
+- <code title="put /api/v1/chats/agents/{agent_id}/settings">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">updateSettings</a>(agentID, { ...params }) -> AgentUpdateSettingsResponse</code>
 
 ### TextToSpeech
 
