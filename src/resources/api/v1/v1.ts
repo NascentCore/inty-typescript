@@ -6,12 +6,7 @@ import { APIResponseDict, Report, ReportCreateParams } from './report';
 import * as SettingsAPI from './settings';
 import { SettingUpdateParams, Settings } from './settings';
 import * as TextToSpeechAPI from './text-to-speech';
-import {
-  TextToSpeech,
-  TextToSpeechGenerateSpeechResponse,
-  TextToSpeechListVoicesParams,
-  TextToSpeechListVoicesResponse,
-} from './text-to-speech';
+import { TextToSpeech, TextToSpeechListVoicesParams, TextToSpeechListVoicesResponse } from './text-to-speech';
 import * as VersionAPI from './version';
 import { Version, VersionCheckParams, VersionCheckResponse } from './version';
 import * as AIAPI from './ai/ai';
@@ -227,7 +222,6 @@ export declare namespace V1 {
 
   export {
     TextToSpeech as TextToSpeech,
-    type TextToSpeechGenerateSpeechResponse as TextToSpeechGenerateSpeechResponse,
     type TextToSpeechListVoicesResponse as TextToSpeechListVoicesResponse,
     type TextToSpeechListVoicesParams as TextToSpeechListVoicesParams,
   };
