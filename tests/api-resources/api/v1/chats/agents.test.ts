@@ -53,4 +53,28 @@ describe('resource agents', () => {
       ),
     ).rejects.toThrow(Inty.NotFoundError);
   });
+
+  // Prism tests are disabled
+  test.skip('getSettings', async () => {
+    const responsePromise = client.api.v1.chats.agents.getSettings('agent_id');
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('updateSettings', async () => {
+    const responsePromise = client.api.v1.chats.agents.updateSettings('agent_id', {});
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
 });
