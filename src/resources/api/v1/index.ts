@@ -22,6 +22,12 @@ export {
   type SubscriptionWebhookResponse,
   type SubscriptionVerifyParams,
 } from './subscription/index';
+export {
+  TextToSpeech,
+  type TextToSpeechGenerateSpeechResponse,
+  type TextToSpeechListVoicesResponse,
+  type TextToSpeechListVoicesParams,
+} from './text-to-speech';
 export { Users, type UserDeleteAccountResponse, type UserDeleteAccountParams } from './users/index';
 export {
   V1,

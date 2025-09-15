@@ -169,7 +169,7 @@ describe('resource agents', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.api.v1.ai.agents.recommend(
-        { page: 1, page_size: 1, sort: 'created_asc' },
+        { count: 1, index: 1, page: 1, page_size: 1, sort: 'created_asc' },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Inty.NotFoundError);
