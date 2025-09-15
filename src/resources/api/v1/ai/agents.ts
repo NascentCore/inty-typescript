@@ -113,13 +113,9 @@ export class Agents extends APIResource {
   }
 
   /**
-   * Get recommended AI agents list (public and approved agents)
-   *
-   * Sorting options:
-   *
-   * - created_desc: Most recent first (default)
-   * - created_asc: Oldest first
-   * - random: Random order
+   * Get recommended AI agents list (public and approved agents), sort_seed is
+   * required when sort is random, which is used to ensure deterministic order for
+   * the random sort option
    *
    * @example
    * ```ts
@@ -535,10 +531,6 @@ export interface AgentFollowingParams {
 }
 
 export interface AgentRecommendParams {
-  count?: number;
-
-  index?: number;
-
   /**
    * Page number, starting from 1
    */
@@ -553,6 +545,11 @@ export interface AgentRecommendParams {
    * Sort order: created_asc, created_desc, random
    */
   sort?: 'created_asc' | 'created_desc' | 'random';
+
+  /**
+   * sort seed [not yet used]
+   */
+  sort_seed?: string;
 }
 
 export interface AgentSearchParams {
