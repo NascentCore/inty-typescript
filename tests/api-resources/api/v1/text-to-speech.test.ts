@@ -9,18 +9,6 @@ const client = new Inty({
 
 describe('resource textToSpeech', () => {
   // Prism tests are disabled
-  test.skip('generateSpeech', async () => {
-    const responsePromise = client.api.v1.textToSpeech.generateSpeech('message_id');
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
   test.skip('listVoices', async () => {
     const responsePromise = client.api.v1.textToSpeech.listVoices();
     const rawResponse = await responsePromise.asResponse();

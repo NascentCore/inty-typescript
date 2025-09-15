@@ -221,10 +221,8 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/api/v1/text-to-speech.ts">TextToSpeechGenerateSpeechResponse</a></code>
 - <code><a href="./src/resources/api/v1/text-to-speech.ts">TextToSpeechListVoicesResponse</a></code>
 
 Methods:
 
-- <code title="post /api/v1/text-to-speech/messages/{message_id}">client.api.v1.textToSpeech.<a href="./src/resources/api/v1/text-to-speech.ts">generateSpeech</a>(messageID) -> unknown</code>
 - <code title="get /api/v1/text-to-speech/list-voices">client.api.v1.textToSpeech.<a href="./src/resources/api/v1/text-to-speech.ts">listVoices</a>({ ...params }) -> TextToSpeechListVoicesResponse</code>
