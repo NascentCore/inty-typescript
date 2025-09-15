@@ -16,7 +16,6 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import { HealthCheckResponse } from './resources/top-level';
 import { API as ApiapiAPI } from './resources/api/api';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
@@ -200,13 +199,6 @@ export class Inty {
    */
   #baseURLOverridden(): boolean {
     return this.baseURL !== 'https://app.inty.cc';
-  }
-
-  /**
-   * 健康检查接口
-   */
-  healthCheck(options?: RequestOptions): APIPromise<unknown> {
-    return this.get('/', options);
   }
 
   protected defaultQuery(): Record<string, string | undefined> | undefined {
@@ -732,8 +724,6 @@ Inty.API = ApiapiAPI;
 
 export declare namespace Inty {
   export type RequestOptions = Opts.RequestOptions;
-
-  export { type HealthCheckResponse as HealthCheckResponse };
 
   export { ApiapiAPI as API };
 }
