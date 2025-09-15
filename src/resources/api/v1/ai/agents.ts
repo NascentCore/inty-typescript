@@ -535,6 +535,10 @@ export interface AgentFollowingParams {
 }
 
 export interface AgentRecommendParams {
+  count?: number;
+
+  index?: number;
+
   /**
    * Page number, starting from 1
    */
