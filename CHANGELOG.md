@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.10.0 (2025-09-17)
+
+Full Changelog: [v0.9.0...v0.10.0](https://github.com/NascentCore/inty-typescript/compare/v0.9.0...v0.10.0)
+
+### Features
+
+* update user profile api ([4d7c16f](https://github.com/NascentCore/inty-typescript/commit/4d7c16fa78252d41cfa8ce6606c71312b58786d1))
+
 ## 0.9.0 (2025-09-15)
 
 Full Changelog: [v0.8.0...v0.9.0](https://github.com/NascentCore/inty-typescript/compare/v0.8.0...v0.9.0)

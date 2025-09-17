@@ -10,10 +10,11 @@ export class Profile extends APIResource {
    *
    * @example
    * ```ts
-   * const user = await client.api.v1.users.profile.retrieve();
+   * const profile =
+   *   await client.api.v1.users.profile.retrieve();
    * ```
    */
-  retrieve(options?: RequestOptions): APIPromise<User> {
+  retrieve(options?: RequestOptions): APIPromise<ProfileRetrieveResponse> {
     return this._client.get('/api/v1/users/profile', options);
   }
 
@@ -81,6 +82,17 @@ export interface User {
   updated_at?: string | null;
 }
 
+export interface ProfileRetrieveResponse {
+  code?: number;
+
+  /**
+   * 返回给客户端的用户信息
+   */
+  data?: User | null;
+
+  message?: string;
+}
+
 export interface ProfileUpdateParams {
   age_group?: string | null;
 
@@ -103,5 +115,10 @@ export interface ProfileUpdateParams {
 }
 
 export declare namespace Profile {
-  export { type Gender as Gender, type User as User, type ProfileUpdateParams as ProfileUpdateParams };
+  export {
+    type Gender as Gender,
+    type User as User,
+    type ProfileRetrieveResponse as ProfileRetrieveResponse,
+    type ProfileUpdateParams as ProfileUpdateParams,
+  };
 }
