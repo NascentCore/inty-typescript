@@ -2,5 +2,11 @@
 
 export { Deletion, type DeletionCheckEligibilityResponse } from './deletion';
 export { Device, type APIResponse, type DeviceRegisterParams } from './device';
-export { Profile, type Gender, type User, type ProfileUpdateParams } from './profile';
+export {
+  Profile,
+  type Gender,
+  type User,
+  type ProfileRetrieveResponse,
+  type ProfileUpdateParams,
+} from './profile';
 export { Users, type UserDeleteAccountResponse, type UserDeleteAccountParams } from './users';
