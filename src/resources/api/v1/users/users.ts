@@ -6,7 +6,14 @@ import { Deletion, DeletionCheckEligibilityResponse } from './deletion';
 import * as DeviceAPI from './device';
 import { APIResponse, Device, DeviceRegisterParams } from './device';
 import * as ProfileAPI from './profile';
-import { Gender, Profile, ProfileRetrieveResponse, ProfileUpdateParams, User } from './profile';
+import {
+  Gender,
+  Profile,
+  ProfileRetrieveResponse,
+  ProfileUpdateParams,
+  ProfileUpdateResponse,
+  User,
+} from './profile';
 import { APIPromise } from '../../../../core/api-promise';
 import { RequestOptions } from '../../../../internal/request-options';
 
@@ -96,6 +103,7 @@ export declare namespace Users {
     type Gender as Gender,
     type User as User,
     type ProfileRetrieveResponse as ProfileRetrieveResponse,
+    type ProfileUpdateResponse as ProfileUpdateResponse,
     type ProfileUpdateParams as ProfileUpdateParams,
   };
 

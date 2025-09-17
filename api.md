@@ -48,11 +48,12 @@ Types:
 - <code><a href="./src/resources/api/v1/users/profile.ts">Gender</a></code>
 - <code><a href="./src/resources/api/v1/users/profile.ts">User</a></code>
 - <code><a href="./src/resources/api/v1/users/profile.ts">ProfileRetrieveResponse</a></code>
+- <code><a href="./src/resources/api/v1/users/profile.ts">ProfileUpdateResponse</a></code>
 
 Methods:
 
 - <code title="get /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">retrieve</a>() -> ProfileRetrieveResponse</code>
-- <code title="put /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">update</a>({ ...params }) -> User</code>
+- <code title="put /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">update</a>({ ...params }) -> ProfileUpdateResponse</code>
 
 #### Device
 

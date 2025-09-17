@@ -7,6 +7,7 @@ export {
   type Gender,
   type User,
   type ProfileRetrieveResponse,
+  type ProfileUpdateResponse,
   type ProfileUpdateParams,
 } from './profile';
 export { Users, type UserDeleteAccountResponse, type UserDeleteAccountParams } from './users';
