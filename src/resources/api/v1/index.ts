@@ -6,6 +6,7 @@ export {
   Chats,
   type Chat,
   type ChatListResponse,
+  type ChatRetrieveVoiceResponse,
   type ChatCreateParams,
   type ChatListParams,
   type ChatCreateCompletionParams,

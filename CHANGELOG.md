@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.12.0 (2025-09-25)
+
+Full Changelog: [v0.11.0...v0.12.0](https://github.com/NascentCore/inty-typescript/compare/v0.11.0...v0.12.0)
+
+### Features
+
+* **api:** manual updates ([27287de](https://github.com/NascentCore/inty-typescript/commit/27287de153efe4a20f2b48197cfe0ab5d54d9d93))
+
+
+### Chores
+
+* do not install brew dependencies in ./scripts/bootstrap by default ([ca18392](https://github.com/NascentCore/inty-typescript/commit/ca1839277deca7ee265b0129277c290a9be359c6))
+
 ## 0.11.0 (2025-09-17)
 
 Full Changelog: [v0.10.0...v0.11.0](https://github.com/NascentCore/inty-typescript/compare/v0.10.0...v0.11.0)
