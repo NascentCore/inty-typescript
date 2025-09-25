@@ -20,6 +20,7 @@ import {
   ChatCreateParams,
   ChatListParams,
   ChatListResponse,
+  ChatRetrieveVoiceResponse,
   Chats,
 } from './chats/chats';
 import * as SubscriptionAPI from './subscription/subscription';
@@ -215,6 +216,7 @@ export declare namespace V1 {
     Chats as Chats,
     type Chat as Chat,
     type ChatListResponse as ChatListResponse,
+    type ChatRetrieveVoiceResponse as ChatRetrieveVoiceResponse,
     type ChatCreateParams as ChatCreateParams,
     type ChatListParams as ChatListParams,
     type ChatCreateCompletionParams as ChatCreateCompletionParams,

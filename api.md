@@ -188,6 +188,7 @@ Types:
 
 - <code><a href="./src/resources/api/v1/chats/chats.ts">Chat</a></code>
 - <code><a href="./src/resources/api/v1/chats/chats.ts">ChatListResponse</a></code>
+- <code><a href="./src/resources/api/v1/chats/chats.ts">ChatRetrieveVoiceResponse</a></code>
 
 Methods:
 
@@ -195,6 +196,7 @@ Methods:
 - <code title="get /api/v1/chats/">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">list</a>({ ...params }) -> ChatListResponse</code>
 - <code title="delete /api/v1/chats/{chat_id}">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">delete</a>(chatID) -> Chat</code>
 - <code title="post /api/v1/chat/completions/{agent_id}">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">createCompletion</a>(agentID, { ...params }) -> APIResponseDict</code>
+- <code title="get /api/v1/chats/voices/{voice_id}">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">retrieveVoice</a>(voiceID) -> unknown</code>
 
 #### Agents
 

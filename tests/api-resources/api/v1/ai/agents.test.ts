@@ -49,6 +49,7 @@ describe('resource agents', () => {
       },
       main_prompt: 'main_prompt',
       message_example: 'message_example',
+      meta_data: { comment: 'comment', score: 1 },
       mode_prompt: 'mode_prompt',
       opening: 'opening',
       opening_audio_url: 'opening_audio_url',

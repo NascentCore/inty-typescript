@@ -31,7 +31,7 @@ export interface TextToSpeechListVoicesParams {
   category?: string | null;
 
   /**
-   * 每页返回结果数，默认 10，最大 100
+   * 每页返回结果数，默认返回所有音色，最大 1000
    */
   page_size?: number | null;
 
