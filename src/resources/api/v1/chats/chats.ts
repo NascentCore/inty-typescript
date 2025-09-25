@@ -80,6 +80,15 @@ export class Chats extends APIResource {
   ): APIPromise<ReportAPI.APIResponseDict> {
     return this._client.post(path`/api/v1/chat/completions/${agentID}`, { body, ...options });
   }
+
+  /**
+   * Get voice info by voice_id
+   *
+   * @deprecated
+   */
+  retrieveVoice(voiceID: string, options?: RequestOptions): APIPromise<unknown> {
+    return this._client.get(path`/api/v1/chats/voices/${voiceID}`, options);
+  }
 }
 
 /**
@@ -113,6 +122,8 @@ export interface Chat {
 }
 
 export type ChatListResponse = Array<Chat>;
+
+export type ChatRetrieveVoiceResponse = unknown;
 
 export interface ChatCreateParams {
   agent_id: string;
@@ -148,6 +159,7 @@ export declare namespace Chats {
   export {
     type Chat as Chat,
     type ChatListResponse as ChatListResponse,
+    type ChatRetrieveVoiceResponse as ChatRetrieveVoiceResponse,
     type ChatCreateParams as ChatCreateParams,
     type ChatListParams as ChatListParams,
     type ChatCreateCompletionParams as ChatCreateCompletionParams,

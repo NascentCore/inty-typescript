@@ -41,7 +41,8 @@ export class Agents extends APIResource {
   }
 
   /**
-   * Update AI agent
+   * 更新任何图片，都会将图片全部记录在 background_images 字段中，用于保存历史记录如
+   * 果没有提供 avatar，则会自动截取头像，并记录在 avatar 字段中
    *
    * @example
    * ```ts
@@ -232,6 +233,11 @@ export interface Agent {
   message_example?: string | null;
 
   /**
+   * Agent 元数据模型
+   */
+  meta_data?: Agent.MetaData | null;
+
+  /**
    * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词
    */
   mode_prompt?: string | null;
@@ -271,6 +277,23 @@ export interface Agent {
   visibility?: AgentVisibility;
 
   voice_id?: string | null;
+}
+
+export namespace Agent {
+  /**
+   * Agent 元数据模型
+   */
+  export interface MetaData {
+    /**
+     * Agent 备注信息
+     */
+    comment?: string | null;
+
+    /**
+     * Agent 评分，1-5 的整数
+     */
+    score?: number | null;
+  }
 }
 
 /**
@@ -406,6 +429,11 @@ export interface AgentCreateParams {
   message_example?: string | null;
 
   /**
+   * Agent 元数据模型
+   */
+  meta_data?: AgentCreateParams.MetaData | null;
+
+  /**
    * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词
    */
   mode_prompt?: string | null;
@@ -445,6 +473,23 @@ export interface AgentCreateParams {
   voice_id?: string | null;
 }
 
+export namespace AgentCreateParams {
+  /**
+   * Agent 元数据模型
+   */
+  export interface MetaData {
+    /**
+     * Agent 备注信息
+     */
+    comment?: string | null;
+
+    /**
+     * Agent 评分，1-5 的整数
+     */
+    score?: number | null;
+  }
+}
+
 export interface AgentUpdateParams {
   alternate_greetings?: Array<string> | null;
 
@@ -479,6 +524,11 @@ export interface AgentUpdateParams {
 
   message_example?: string | null;
 
+  /**
+   * Agent 元数据模型
+   */
+  meta_data?: AgentUpdateParams.MetaData | null;
+
   mode_prompt?: string | null;
 
   name?: string | null;
@@ -512,6 +562,23 @@ export interface AgentUpdateParams {
   voice_id?: string | null;
 }
 
+export namespace AgentUpdateParams {
+  /**
+   * Agent 元数据模型
+   */
+  export interface MetaData {
+    /**
+     * Agent 备注信息
+     */
+    comment?: string | null;
+
+    /**
+     * Agent 评分，1-5 的整数
+     */
+    score?: number | null;
+  }
+}
+
 export interface AgentListParams {
   limit?: number;
 
@@ -542,12 +609,12 @@ export interface AgentRecommendParams {
   page_size?: number;
 
   /**
-   * Sort order: created_asc, created_desc, random
+   * Sort order: created_asc, created_desc, random, score_based_random
    */
-  sort?: 'created_asc' | 'created_desc' | 'random';
+  sort?: 'created_asc' | 'created_desc' | 'random' | 'score_based_random';
 
   /**
-   * sort seed [not yet used]
+   * Sort seed for deterministic random ordering
    */
   sort_seed?: string;
 }
