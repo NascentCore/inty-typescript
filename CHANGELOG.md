@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.13.0 (2025-09-26)
+
+Full Changelog: [v0.12.0...v0.13.0](https://github.com/NascentCore/inty-typescript/compare/v0.12.0...v0.13.0)
+
+### Features
+
+* **api:** manual updates ([5988dbd](https://github.com/NascentCore/inty-typescript/commit/5988dbd914f5368c3782509025ef1410bf691f22))
+
+
+### Performance Improvements
+
+* faster formatting ([76543a2](https://github.com/NascentCore/inty-typescript/commit/76543a2e4d32dea2cf198a55850b9cf10bc16c3c))
+
+
+### Chores
+
+* **internal:** remove deprecated `compilerOptions.baseUrl` from tsconfig.json ([5019463](https://github.com/NascentCore/inty-typescript/commit/501946315c7dd67f05b370db6539059514678ee6))
+
 ## 0.12.0 (2025-09-25)
 
 Full Changelog: [v0.11.0...v0.12.0](https://github.com/NascentCore/inty-typescript/compare/v0.11.0...v0.12.0)
