@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "inty/*": ["dist/src/*"],
-      "inty": ["dist/src/index.ts"]
+      "inty/*": ["./dist/src/*"],
+      "inty": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,
