@@ -7,10 +7,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "inty/*": ["src/*"],
-      "inty": ["src/index.ts"]
+      "inty/*": ["./src/*"],
+      "inty": ["./src/index.ts"]
     },
     "noEmit": true,
 
