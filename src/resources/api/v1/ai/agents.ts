@@ -159,7 +159,7 @@ export class Agents extends APIResource {
 }
 
 /**
- * AI 角色
+ * AI 角色，在 sqlalchemy 模型基础上添加额外多表查询来的数据
  */
 export interface Agent {
   id: string;
@@ -181,9 +181,19 @@ export interface Agent {
 
   avatar?: string | null;
 
+  /**
+   * Image size
+   */
+  avatar_size?: Agent.AvatarSize | null;
+
   background?: string | null;
 
   background_images?: Array<string> | null;
+
+  /**
+   * Image size
+   */
+  background_size?: Agent.BackgroundSize | null;
 
   category?: string | null;
 
@@ -281,6 +291,24 @@ export interface Agent {
 
 export namespace Agent {
   /**
+   * Image size
+   */
+  export interface AvatarSize {
+    height: number;
+
+    width: number;
+  }
+
+  /**
+   * Image size
+   */
+  export interface BackgroundSize {
+    height: number;
+
+    width: number;
+  }
+
+  /**
    * Agent 元数据模型
    */
   export interface MetaData {
@@ -305,7 +333,7 @@ export interface APIResponseAgent {
   code?: number;
 
   /**
-   * AI 角色
+   * AI 角色，在 sqlalchemy 模型基础上添加额外多表查询来的数据
    */
   data?: Agent | null;
 
