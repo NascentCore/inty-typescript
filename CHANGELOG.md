@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.13.1 (2025-09-27)
+
+Full Changelog: [v0.13.0...v0.13.1](https://github.com/NascentCore/inty-typescript/compare/v0.13.0...v0.13.1)
+
+### Chores
+
+* **internal:** fix incremental formatting in some cases ([2b1246a](https://github.com/NascentCore/inty-typescript/commit/2b1246a449e2f2b74a86e058cdd3bfbe74df4523))
+
 ## 0.13.0 (2025-09-26)
 
 Full Changelog: [v0.12.0...v0.13.0](https://github.com/NascentCore/inty-typescript/compare/v0.12.0...v0.13.0)
