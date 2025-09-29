@@ -31,6 +31,8 @@ export interface APIResponse {
 
 export interface DeviceRegisterParams {
   token: string;
+
+  request_id?: string | null;
 }
 
 export declare namespace Device {

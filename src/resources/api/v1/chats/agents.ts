@@ -165,6 +165,8 @@ export interface AgentUpdateSettingsParams {
 
   premium_mode?: boolean | null;
 
+  request_id?: string | null;
+
   style_prompt?: string | null;
 
   voice_enabled?: boolean | null;

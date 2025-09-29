@@ -40,6 +40,7 @@ describe('resource plans', () => {
       discount_rate: 0,
       features: { foo: 'bar' },
       is_active: true,
+      request_id: 'request_id',
       sort_order: 0,
     });
   });

@@ -41,6 +41,8 @@ export interface ReportCreateParams {
   description?: string | null;
 
   image_urls?: Array<string> | null;
+
+  request_id?: string | null;
 }
 
 export declare namespace Report {

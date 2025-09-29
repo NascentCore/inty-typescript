@@ -51,6 +51,8 @@ export interface AuthCreateGuestParams {
 
   device_id?: string | null;
 
+  request_id?: string | null;
+
   system_language?: string | null;
 }
 

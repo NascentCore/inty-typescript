@@ -86,6 +86,8 @@ export interface UserDeleteAccountParams {
    * 删除原因
    */
   reason?: string | null;
+
+  request_id?: string | null;
 }
 
 Users.Profile = Profile;

@@ -24,7 +24,10 @@ describe('resource users', () => {
   test.skip('deleteAccount: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.api.v1.users.deleteAccount({ reason: '隐私关注' }, { path: '/_stainless_unknown_path' }),
+      client.api.v1.users.deleteAccount(
+        { reason: '隐私关注', request_id: 'request_id' },
+        { path: '/_stainless_unknown_path' },
+      ),
     ).rejects.toThrow(Inty.NotFoundError);
   });
 });
