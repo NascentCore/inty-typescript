@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.14.0 (2025-09-29)
+
+Full Changelog: [v0.13.0...v0.14.0](https://github.com/NascentCore/inty-typescript/compare/v0.13.0...v0.14.0)
+
+### Features
+
+* **api:** manual updates ([0849c42](https://github.com/NascentCore/inty-typescript/commit/0849c4277eb4b5f4b902900d36a620abb821cb8e))
+
+
+### Chores
+
+* **internal:** codegen related update ([c59f001](https://github.com/NascentCore/inty-typescript/commit/c59f001a1b107abaadeca9c2d1de3a9773113951))
+* **internal:** fix incremental formatting in some cases ([2b1246a](https://github.com/NascentCore/inty-typescript/commit/2b1246a449e2f2b74a86e058cdd3bfbe74df4523))
+* **internal:** ignore .eslintcache ([acacaec](https://github.com/NascentCore/inty-typescript/commit/acacaec1e73dc1b78fd276d3ee451a9e8ecb23dd))
+
 ## 0.13.0 (2025-09-26)
 
 Full Changelog: [v0.12.0...v0.13.0](https://github.com/NascentCore/inty-typescript/compare/v0.12.0...v0.13.0)
