@@ -28,6 +28,7 @@ describe('resource admin', () => {
       subscription_id: 'subscription_id',
       reason: 'reason',
       refund_amount: 0,
+      request_id: 'request_id',
     });
   });
 });

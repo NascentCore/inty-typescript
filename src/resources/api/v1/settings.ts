@@ -50,6 +50,8 @@ export interface Settings {
 export interface SettingUpdateParams {
   language?: string | null;
 
+  request_id?: string | null;
+
   voice_enabled?: boolean | null;
 }
 

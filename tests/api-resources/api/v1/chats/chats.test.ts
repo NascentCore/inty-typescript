@@ -22,7 +22,7 @@ describe('resource chats', () => {
 
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
-    const response = await client.api.v1.chats.create({ agent_id: 'agent_id' });
+    const response = await client.api.v1.chats.create({ agent_id: 'agent_id', request_id: 'request_id' });
   });
 
   // Prism tests are disabled
@@ -77,6 +77,7 @@ describe('resource chats', () => {
       messages: [{ content: 'content', role: 'role' }],
       language: 'language',
       model: 'model',
+      request_id: 'request_id',
       stream: true,
     });
   });

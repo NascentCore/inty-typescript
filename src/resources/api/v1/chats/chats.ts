@@ -127,6 +127,8 @@ export type ChatRetrieveVoiceResponse = unknown;
 
 export interface ChatCreateParams {
   agent_id: string;
+
+  request_id?: string | null;
 }
 
 export interface ChatListParams {
@@ -141,6 +143,8 @@ export interface ChatCreateCompletionParams {
   language?: string;
 
   model?: string;
+
+  request_id?: string | null;
 
   stream?: boolean;
 }

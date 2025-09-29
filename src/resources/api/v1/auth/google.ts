@@ -82,6 +82,8 @@ export namespace GoogleLoginResponse {
 export interface GoogleLoginParams {
   id_token: string;
 
+  request_id?: string | null;
+
   /**
    * 用户信息
    */
