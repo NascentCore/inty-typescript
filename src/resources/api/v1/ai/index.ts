@@ -4,6 +4,7 @@ export { AI } from './ai';
 export {
   Agents,
   type Agent,
+  type AgentMetaData,
   type AgentVisibility,
   type APIResponseAgent,
   type APIResponsePaginationDataAgent,
