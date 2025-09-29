@@ -122,6 +122,8 @@ export interface ProfileUpdateParams {
 
   phone?: string | null;
 
+  request_id?: string | null;
+
   system_language?: string | null;
 }
 

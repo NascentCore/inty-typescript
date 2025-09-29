@@ -22,6 +22,6 @@ describe('resource device', () => {
 
   // Prism tests are disabled
   test.skip('register: required and optional params', async () => {
-    const response = await client.api.v1.users.device.register({ token: 'token' });
+    const response = await client.api.v1.users.device.register({ token: 'token', request_id: 'request_id' });
   });
 });

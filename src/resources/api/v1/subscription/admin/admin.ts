@@ -97,6 +97,8 @@ export interface AdminProcessRefundParams {
    * 退款金额，不填写则退全款
    */
   refund_amount?: number | null;
+
+  request_id?: string | null;
 }
 
 Admin.Plans = Plans;

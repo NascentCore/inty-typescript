@@ -201,6 +201,8 @@ export interface PlanCreateParams {
    */
   is_active?: boolean;
 
+  request_id?: string | null;
+
   /**
    * 排序顺序
    */

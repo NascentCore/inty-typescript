@@ -467,6 +467,8 @@ export interface SubscriptionVerifyParams {
    * 订单 ID
    */
   order_id?: string | null;
+
+  request_id?: string | null;
 }
 
 Subscription.Admin = Admin;

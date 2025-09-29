@@ -281,6 +281,8 @@ export interface Agent {
 
   updated_at?: number | null;
 
+  user?: string | null;
+
   /**
    * AI 角色可见性
    */
@@ -318,7 +320,7 @@ export namespace Agent {
     comment?: string | null;
 
     /**
-     * Agent 评分，1-5 的整数
+     * Agent 评分
      */
     score?: number | null;
   }
@@ -484,6 +486,8 @@ export interface AgentCreateParams {
    */
   prompt?: string | null;
 
+  request_id?: string | null;
+
   /**
    * 背景设定 (推荐)
    */
@@ -512,7 +516,7 @@ export namespace AgentCreateParams {
     comment?: string | null;
 
     /**
-     * Agent 评分，1-5 的整数
+     * Agent 评分
      */
     score?: number | null;
   }
@@ -576,6 +580,8 @@ export interface AgentUpdateParams {
    */
   prompt?: string | null;
 
+  request_id?: string | null;
+
   scenario?: string | null;
 
   settings?: { [key: string]: unknown } | null;
@@ -601,7 +607,7 @@ export namespace AgentUpdateParams {
     comment?: string | null;
 
     /**
-     * Agent 评分，1-5 的整数
+     * Agent 评分
      */
     score?: number | null;
   }
