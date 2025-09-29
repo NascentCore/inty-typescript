@@ -92,6 +92,7 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/api/v1/ai/agents.ts">Agent</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents.ts">AgentMetaData</a></code>
 - <code><a href="./src/resources/api/v1/ai/agents.ts">AgentVisibility</a></code>
 - <code><a href="./src/resources/api/v1/ai/agents.ts">APIResponseAgent</a></code>
 - <code><a href="./src/resources/api/v1/ai/agents.ts">APIResponsePaginationDataAgent</a></code>

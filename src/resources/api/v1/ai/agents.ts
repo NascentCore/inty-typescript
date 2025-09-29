@@ -245,7 +245,7 @@ export interface Agent {
   /**
    * Agent 元数据模型
    */
-  meta_data?: Agent.MetaData | null;
+  meta_data?: AgentMetaData | null;
 
   /**
    * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词
@@ -309,21 +309,21 @@ export namespace Agent {
 
     width: number;
   }
+}
+
+/**
+ * Agent 元数据模型
+ */
+export interface AgentMetaData {
+  /**
+   * Agent 备注信息
+   */
+  comment?: string | null;
 
   /**
-   * Agent 元数据模型
+   * Agent 评分
    */
-  export interface MetaData {
-    /**
-     * Agent 备注信息
-     */
-    comment?: string | null;
-
-    /**
-     * Agent 评分
-     */
-    score?: number | null;
-  }
+  score?: number | null;
 }
 
 /**
@@ -461,7 +461,7 @@ export interface AgentCreateParams {
   /**
    * Agent 元数据模型
    */
-  meta_data?: AgentCreateParams.MetaData | null;
+  meta_data?: AgentMetaData | null;
 
   /**
    * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词
@@ -505,23 +505,6 @@ export interface AgentCreateParams {
   voice_id?: string | null;
 }
 
-export namespace AgentCreateParams {
-  /**
-   * Agent 元数据模型
-   */
-  export interface MetaData {
-    /**
-     * Agent 备注信息
-     */
-    comment?: string | null;
-
-    /**
-     * Agent 评分
-     */
-    score?: number | null;
-  }
-}
-
 export interface AgentUpdateParams {
   alternate_greetings?: Array<string> | null;
 
@@ -559,7 +542,7 @@ export interface AgentUpdateParams {
   /**
    * Agent 元数据模型
    */
-  meta_data?: AgentUpdateParams.MetaData | null;
+  meta_data?: AgentMetaData | null;
 
   mode_prompt?: string | null;
 
@@ -594,23 +577,6 @@ export interface AgentUpdateParams {
   visibility?: AgentVisibility | null;
 
   voice_id?: string | null;
-}
-
-export namespace AgentUpdateParams {
-  /**
-   * Agent 元数据模型
-   */
-  export interface MetaData {
-    /**
-     * Agent 备注信息
-     */
-    comment?: string | null;
-
-    /**
-     * Agent 评分
-     */
-    score?: number | null;
-  }
 }
 
 export interface AgentListParams {
@@ -673,6 +639,7 @@ export interface AgentSearchParams {
 export declare namespace Agents {
   export {
     type Agent as Agent,
+    type AgentMetaData as AgentMetaData,
     type AgentVisibility as AgentVisibility,
     type APIResponseAgent as APIResponseAgent,
     type APIResponsePaginationDataAgent as APIResponsePaginationDataAgent,
