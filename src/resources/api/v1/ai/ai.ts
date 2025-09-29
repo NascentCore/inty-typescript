@@ -10,6 +10,7 @@ import {
   AgentFollowingParams,
   AgentListParams,
   AgentListResponse,
+  AgentMetaData,
   AgentRecommendParams,
   AgentSearchParams,
   AgentUpdateParams,
@@ -28,6 +29,7 @@ export declare namespace AI {
   export {
     Agents as Agents,
     type Agent as Agent,
+    type AgentMetaData as AgentMetaData,
     type AgentVisibility as AgentVisibility,
     type APIResponseAgent as APIResponseAgent,
     type APIResponsePaginationDataAgent as APIResponsePaginationDataAgent,
