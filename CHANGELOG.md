@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.16.0 (2025-10-06)
+
+Full Changelog: [v0.15.0...v0.16.0](https://github.com/NascentCore/inty-typescript/compare/v0.15.0...v0.16.0)
+
+### Features
+
+* **api:** manual updates ([5ad476a](https://github.com/NascentCore/inty-typescript/commit/5ad476ad19723b63615fba56c44d4c2785843945))
+* Reformat all code with ./fmt.sh ([de7113d](https://github.com/NascentCore/inty-typescript/commit/de7113d8b009996594413578dad7d96dcf4e8ecf))
+
+
+### Chores
+
+* **internal:** remove .eslintcache ([f366550](https://github.com/NascentCore/inty-typescript/commit/f3665504439f5f6b70f40c95cfc77146dd87a4e1))
+* **jsdoc:** fix [@link](https://github.com/link) annotations to refer only to parts of the package‘s public interface ([a52f9a5](https://github.com/NascentCore/inty-typescript/commit/a52f9a52347c4bde14abcc52dc8e6f7d41736b49))
+
 ## 0.15.0 (2025-09-29)
 
 Full Changelog: [v0.14.0...v0.15.0](https://github.com/NascentCore/inty-typescript/compare/v0.14.0...v0.15.0)
