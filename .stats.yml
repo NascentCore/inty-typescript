@@ -1,4 +1,4 @@
-configured_endpoints: 43
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/inty%2Finty-75693228159e3b80133b46750a39e294ae40ac9cab0d65831d7632fcdf72ca5f.yml
-openapi_spec_hash: a449467e89739f4e1789e77b7acb92ae
-config_hash: c1821fa1362c0f084f8b4b913bb6a709
+configured_endpoints: 44
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/inty%2Finty-8c144d825fdfa369cf16995bf00706fb8bef562ade8cf6948b28b737ecb6a6cb.yml
+openapi_spec_hash: 0131ffad8903eedaf491699b0e28351b
+config_hash: c0a34dbff811a8b614d969c58e58846e

@@ -8,6 +8,7 @@ export {
   type User,
   type ProfileRetrieveResponse,
   type ProfileUpdateResponse,
+  type ProfileMeResponse,
   type ProfileUpdateParams,
 } from './profile';
 export { Users, type UserDeleteAccountResponse, type UserDeleteAccountParams } from './users';

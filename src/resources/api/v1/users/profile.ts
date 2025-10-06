@@ -29,6 +29,18 @@ export class Profile extends APIResource {
   update(body: ProfileUpdateParams, options?: RequestOptions): APIPromise<ProfileUpdateResponse> {
     return this._client.put('/api/v1/users/profile', { body, ...options });
   }
+
+  /**
+   * Get current user profile.
+   *
+   * @example
+   * ```ts
+   * const response = await client.api.v1.users.profile.me();
+   * ```
+   */
+  me(options?: RequestOptions): APIPromise<ProfileMeResponse> {
+    return this._client.get('/api/v1/users/me', options);
+  }
 }
 
 /**
@@ -104,6 +116,17 @@ export interface ProfileUpdateResponse {
   message?: string;
 }
 
+export interface ProfileMeResponse {
+  code?: number;
+
+  /**
+   * 返回给客户端的用户信息
+   */
+  data?: User | null;
+
+  message?: string;
+}
+
 export interface ProfileUpdateParams {
   age_group?: string | null;
 
@@ -133,6 +156,7 @@ export declare namespace Profile {
     type User as User,
     type ProfileRetrieveResponse as ProfileRetrieveResponse,
     type ProfileUpdateResponse as ProfileUpdateResponse,
+    type ProfileMeResponse as ProfileMeResponse,
     type ProfileUpdateParams as ProfileUpdateParams,
   };
 }
