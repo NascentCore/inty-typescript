@@ -9,6 +9,7 @@ import * as ProfileAPI from './profile';
 import {
   Gender,
   Profile,
+  ProfileMeResponse,
   ProfileRetrieveResponse,
   ProfileUpdateParams,
   ProfileUpdateResponse,
@@ -106,6 +107,7 @@ export declare namespace Users {
     type User as User,
     type ProfileRetrieveResponse as ProfileRetrieveResponse,
     type ProfileUpdateResponse as ProfileUpdateResponse,
+    type ProfileMeResponse as ProfileMeResponse,
     type ProfileUpdateParams as ProfileUpdateParams,
   };
 

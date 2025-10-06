@@ -49,11 +49,13 @@ Types:
 - <code><a href="./src/resources/api/v1/users/profile.ts">User</a></code>
 - <code><a href="./src/resources/api/v1/users/profile.ts">ProfileRetrieveResponse</a></code>
 - <code><a href="./src/resources/api/v1/users/profile.ts">ProfileUpdateResponse</a></code>
+- <code><a href="./src/resources/api/v1/users/profile.ts">ProfileMeResponse</a></code>
 
 Methods:
 
 - <code title="get /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">retrieve</a>() -> ProfileRetrieveResponse</code>
 - <code title="put /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">update</a>({ ...params }) -> ProfileUpdateResponse</code>
+- <code title="get /api/v1/users/me">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">me</a>() -> ProfileMeResponse</code>
 
 #### Device
 
