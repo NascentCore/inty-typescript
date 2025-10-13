@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.17.0 (2025-10-13)
+
+Full Changelog: [v0.16.0...v0.17.0](https://github.com/NascentCore/inty-typescript/compare/v0.16.0...v0.17.0)
+
+### Features
+
+* **api:** manual updates ([80bd9c9](https://github.com/NascentCore/inty-typescript/commit/80bd9c949b9ad0e642373935bf7f694682f90b85))
+
+
+### Chores
+
+* **internal:** use npm pack for build uploads ([4541a1c](https://github.com/NascentCore/inty-typescript/commit/4541a1c00c19670d78b1cb08c4f7e430017a0be9))
+
 ## 0.16.0 (2025-10-06)
 
 Full Changelog: [v0.15.0...v0.16.0](https://github.com/NascentCore/inty-typescript/compare/v0.15.0...v0.16.0)
