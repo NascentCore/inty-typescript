@@ -6,20 +6,7 @@ import { RequestOptions } from '../../../../internal/request-options';
 
 export class Profile extends APIResource {
   /**
-   * Get current user profile.
-   *
-   * @example
-   * ```ts
-   * const profile =
-   *   await client.api.v1.users.profile.retrieve();
-   * ```
-   */
-  retrieve(options?: RequestOptions): APIPromise<ProfileRetrieveResponse> {
-    return this._client.get('/api/v1/users/profile', options);
-  }
-
-  /**
-   * Update current user profile.
+   * Update current user profile, support avatar update
    *
    * @example
    * ```ts
@@ -94,17 +81,6 @@ export interface User {
   updated_at?: string | null;
 }
 
-export interface ProfileRetrieveResponse {
-  code?: number;
-
-  /**
-   * 返回给客户端的用户信息
-   */
-  data?: User | null;
-
-  message?: string;
-}
-
 export interface ProfileUpdateResponse {
   code?: number;
 
@@ -154,7 +130,6 @@ export declare namespace Profile {
   export {
     type Gender as Gender,
     type User as User,
-    type ProfileRetrieveResponse as ProfileRetrieveResponse,
     type ProfileUpdateResponse as ProfileUpdateResponse,
     type ProfileMeResponse as ProfileMeResponse,
     type ProfileUpdateParams as ProfileUpdateParams,
