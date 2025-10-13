@@ -62,16 +62,10 @@ export class Chats extends APIResource {
   }
 
   /**
-   * 基于 Agent ID 的 OpenAI 风格聊天接口如果用户还没有和该 Agent 创建会话，则自动创
-   * 建
+   * 可以处理包括图片在内的各种消息类型，媒体类型应该先上传，然后将 URL 作为索引发送
+   * 到此 API
    *
-   * @example
-   * ```ts
-   * const apiResponseDict =
-   *   await client.api.v1.chats.createCompletion('agent_id', {
-   *     messages: [{ content: 'content', role: 'role' }],
-   *   });
-   * ```
+   * @deprecated
    */
   createCompletion(
     agentID: string,
@@ -104,6 +98,8 @@ export interface Chat {
   user_id: string;
 
   agent_avatar?: string | null;
+
+  agent_background?: string | null;
 
   agent_is_deleted?: boolean | null;
 

@@ -6,7 +6,6 @@ export {
   Profile,
   type Gender,
   type User,
-  type ProfileRetrieveResponse,
   type ProfileUpdateResponse,
   type ProfileMeResponse,
   type ProfileUpdateParams,
