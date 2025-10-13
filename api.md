@@ -47,13 +47,11 @@ Types:
 
 - <code><a href="./src/resources/api/v1/users/profile.ts">Gender</a></code>
 - <code><a href="./src/resources/api/v1/users/profile.ts">User</a></code>
-- <code><a href="./src/resources/api/v1/users/profile.ts">ProfileRetrieveResponse</a></code>
 - <code><a href="./src/resources/api/v1/users/profile.ts">ProfileUpdateResponse</a></code>
 - <code><a href="./src/resources/api/v1/users/profile.ts">ProfileMeResponse</a></code>
 
 Methods:
 
-- <code title="get /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">retrieve</a>() -> ProfileRetrieveResponse</code>
 - <code title="put /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">update</a>({ ...params }) -> ProfileUpdateResponse</code>
 - <code title="get /api/v1/users/me">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">me</a>() -> ProfileMeResponse</code>
 
@@ -226,3 +224,15 @@ Types:
 Methods:
 
 - <code title="get /api/v1/text-to-speech/list-voices">client.api.v1.textToSpeech.<a href="./src/resources/api/v1/text-to-speech.ts">listVoices</a>({ ...params }) -> TextToSpeechListVoicesResponse</code>
+
+# V2
+
+## Chat
+
+Types:
+
+- <code><a href="./src/resources/v2/chat.ts">ChatSendMessageResponse</a></code>
+
+Methods:
+
+- <code title="post /api/v2/chat/completions/{agent_id}">client.v2.chat.<a href="./src/resources/v2/chat.ts">sendMessage</a>(agentID, { ...params }) -> ChatSendMessageResponse</code>

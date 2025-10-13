@@ -6,7 +6,7 @@ import { RequestOptions } from '../../../../internal/request-options';
 
 export class Device extends APIResource {
   /**
-   * 注册或更新设备 token
+   * 在用户未打开 app 时向设备推送消息
    *
    * @example
    * ```ts

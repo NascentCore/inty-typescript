@@ -17,6 +17,7 @@ import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
 import { API as ApiapiAPI } from './resources/api/api';
+import { V2 } from './resources/v2/v2';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -718,12 +719,16 @@ export class Inty {
   static toFile = Uploads.toFile;
 
   api: API.API = new API.API(this);
+  v2: API.V2 = new API.V2(this);
 }
 
 Inty.API = ApiapiAPI;
+Inty.V2 = V2;
 
 export declare namespace Inty {
   export type RequestOptions = Opts.RequestOptions;
 
   export { ApiapiAPI as API };
+
+  export { V2 as V2 };
 }

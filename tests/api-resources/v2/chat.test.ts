@@ -7,10 +7,12 @@ const client = new Inty({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource profile', () => {
+describe('resource chat', () => {
   // Prism tests are disabled
-  test.skip('update', async () => {
-    const responsePromise = client.api.v1.users.profile.update({});
+  test.skip('sendMessage: only required params', async () => {
+    const responsePromise = client.v2.chat.sendMessage('agent_id', {
+      messages: [{ content: 'content', role: 'role' }],
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -21,14 +23,13 @@ describe('resource profile', () => {
   });
 
   // Prism tests are disabled
-  test.skip('me', async () => {
-    const responsePromise = client.api.v1.users.profile.me();
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
+  test.skip('sendMessage: required and optional params', async () => {
+    const response = await client.v2.chat.sendMessage('agent_id', {
+      messages: [{ content: 'content', role: 'role' }],
+      language: 'language',
+      model: 'model',
+      request_id: 'request_id',
+      stream: true,
+    });
   });
 });
