@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.18.0 (2025-10-14)
+
+Full Changelog: [v0.17.0...v0.18.0](https://github.com/NascentCore/inty-typescript/compare/v0.17.0...v0.18.0)
+
+### Features
+
+* **api:** manual updates ([96c5d7f](https://github.com/NascentCore/inty-typescript/commit/96c5d7fa7990c40b27ae4e545e30bb162e71be12))
+
 ## 0.17.0 (2025-10-13)
 
 Full Changelog: [v0.16.0...v0.17.0](https://github.com/NascentCore/inty-typescript/compare/v0.16.0...v0.17.0)

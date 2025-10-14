@@ -2,7 +2,7 @@
 
 import { APIResource } from '../../../core/resource';
 import * as ReportAPI from './report';
-import { APIResponseDict, Report, ReportCreateParams } from './report';
+import { APIResponseDict, Report, ReportCreateParams, ReportCreateResponse } from './report';
 import * as SettingsAPI from './settings';
 import { SettingUpdateParams, Settings } from './settings';
 import * as TextToSpeechAPI from './text-to-speech';
@@ -188,6 +188,7 @@ export declare namespace V1 {
   export {
     Report as Report,
     type APIResponseDict as APIResponseDict,
+    type ReportCreateResponse as ReportCreateResponse,
     type ReportCreateParams as ReportCreateParams,
   };
 

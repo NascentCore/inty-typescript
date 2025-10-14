@@ -11,7 +11,7 @@ export {
   type ChatListParams,
   type ChatCreateCompletionParams,
 } from './chats/index';
-export { Report, type APIResponseDict, type ReportCreateParams } from './report';
+export { Report, type APIResponseDict, type ReportCreateResponse, type ReportCreateParams } from './report';
 export { Settings, type SettingUpdateParams } from './settings';
 export {
   Subscription,
