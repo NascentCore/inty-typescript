@@ -73,7 +73,7 @@ export namespace ChatSendMessageResponse {
 
         role: string;
 
-        id?: string | null;
+        id?: number | null;
 
         audio_url?: string | null;
 
