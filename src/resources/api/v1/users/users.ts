@@ -3,8 +3,6 @@
 import { APIResource } from '../../../../core/resource';
 import * as DeletionAPI from './deletion';
 import { Deletion, DeletionCheckEligibilityResponse } from './deletion';
-import * as DeviceAPI from './device';
-import { APIResponse, Device, DeviceRegisterParams } from './device';
 import * as ProfileAPI from './profile';
 import {
   Gender,
@@ -19,7 +17,6 @@ import { RequestOptions } from '../../../../internal/request-options';
 
 export class Users extends APIResource {
   profile: ProfileAPI.Profile = new ProfileAPI.Profile(this._client);
-  device: DeviceAPI.Device = new DeviceAPI.Device(this._client);
   deletion: DeletionAPI.Deletion = new DeletionAPI.Deletion(this._client);
 
   /**
@@ -91,7 +88,6 @@ export interface UserDeleteAccountParams {
 }
 
 Users.Profile = Profile;
-Users.Device = Device;
 Users.Deletion = Deletion;
 
 export declare namespace Users {
@@ -107,12 +103,6 @@ export declare namespace Users {
     type ProfileUpdateResponse as ProfileUpdateResponse,
     type ProfileMeResponse as ProfileMeResponse,
     type ProfileUpdateParams as ProfileUpdateParams,
-  };
-
-  export {
-    Device as Device,
-    type APIResponse as APIResponse,
-    type DeviceRegisterParams as DeviceRegisterParams,
   };
 
   export { Deletion as Deletion, type DeletionCheckEligibilityResponse as DeletionCheckEligibilityResponse };

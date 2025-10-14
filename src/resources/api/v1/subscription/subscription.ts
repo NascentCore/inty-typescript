@@ -135,6 +135,16 @@ export namespace APIResponseSubscriptionStatus {
     features?: { [key: string]: unknown };
 
     /**
+     * 24 小时内聊天次数限制（游客用户）
+     */
+    guest_chat_24h_limit?: number | null;
+
+    /**
+     * 24 小时内语音生成次数限制（游客用户）
+     */
+    guest_voice_24h_limit?: number | null;
+
+    /**
      * 是否曾经有过订阅记录
      */
     has_ever_subscribed?: boolean;
@@ -158,6 +168,11 @@ export namespace APIResponseSubscriptionStatus {
      * 总聊天次数限制（免费用户）
      */
     total_chat_limit?: number | null;
+
+    /**
+     * 24 小时内语音生成次数限制
+     */
+    voice_24h_limit?: number | null;
 
     /**
      * 是否会自动续费

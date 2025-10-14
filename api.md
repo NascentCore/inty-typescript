@@ -55,16 +55,6 @@ Methods:
 - <code title="put /api/v1/users/profile">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">update</a>({ ...params }) -> ProfileUpdateResponse</code>
 - <code title="get /api/v1/users/me">client.api.v1.users.profile.<a href="./src/resources/api/v1/users/profile.ts">me</a>() -> ProfileMeResponse</code>
 
-#### Device
-
-Types:
-
-- <code><a href="./src/resources/api/v1/users/device.ts">APIResponse</a></code>
-
-Methods:
-
-- <code title="post /api/v1/users/device/register">client.api.v1.users.device.<a href="./src/resources/api/v1/users/device.ts">register</a>({ ...params }) -> APIResponse</code>
-
 #### Deletion
 
 Types:
@@ -80,10 +70,11 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/api/v1/report.ts">APIResponseDict</a></code>
+- <code><a href="./src/resources/api/v1/report.ts">ReportCreateResponse</a></code>
 
 Methods:
 
-- <code title="post /api/v1/report/">client.api.v1.report.<a href="./src/resources/api/v1/report.ts">create</a>({ ...params }) -> APIResponse</code>
+- <code title="post /api/v1/report/">client.api.v1.report.<a href="./src/resources/api/v1/report.ts">create</a>({ ...params }) -> ReportCreateResponse</code>
 
 ### AI
 
