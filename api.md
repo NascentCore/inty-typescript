@@ -88,11 +88,12 @@ Types:
 - <code><a href="./src/resources/api/v1/ai/agents.ts">APIResponseAgent</a></code>
 - <code><a href="./src/resources/api/v1/ai/agents.ts">APIResponsePaginationDataAgent</a></code>
 - <code><a href="./src/resources/api/v1/ai/agents.ts">ModelConfig</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents.ts">AgentCreateResponse</a></code>
 - <code><a href="./src/resources/api/v1/ai/agents.ts">AgentListResponse</a></code>
 
 Methods:
 
-- <code title="post /api/v1/ai/agents">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">create</a>({ ...params }) -> APIResponseAgent</code>
+- <code title="post /api/v1/ai/agents">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">create</a>({ ...params }) -> AgentCreateResponse</code>
 - <code title="get /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">retrieve</a>(agentID) -> Agent</code>
 - <code title="put /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">update</a>(agentID, { ...params }) -> Agent</code>
 - <code title="get /api/v1/ai/agents/me">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">list</a>({ ...params }) -> AgentListResponse</code>
