@@ -9,6 +9,8 @@ export class Chat extends APIResource {
   /**
    * 可以处理包括图片在内的各种消息类型，媒体类型应该先上传，然后将 URL 作为索引发送
    * 到此 API
+   *
+   * @deprecated
    */
   sendMessage(
     agentID: string,

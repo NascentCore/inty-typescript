@@ -9,6 +9,7 @@ export {
   type APIResponseAgent,
   type APIResponsePaginationDataAgent,
   type ModelConfig,
+  type AgentCreateResponse,
   type AgentListResponse,
   type AgentCreateParams,
   type AgentUpdateParams,

@@ -14,14 +14,13 @@ export class Agents extends APIResource {
    *
    * @example
    * ```ts
-   * const apiResponseAgent =
-   *   await client.api.v1.ai.agents.create({
-   *     gender: 'gender',
-   *     name: 'name',
-   *   });
+   * const agent = await client.api.v1.ai.agents.create({
+   *   gender: 'gender',
+   *   name: 'name',
+   * });
    * ```
    */
-  create(body: AgentCreateParams, options?: RequestOptions): APIPromise<APIResponseAgent> {
+  create(body: AgentCreateParams, options?: RequestOptions): APIPromise<AgentCreateResponse> {
     return this._client.post('/api/v1/ai/agents', { body, ...options });
   }
 
@@ -405,6 +404,17 @@ export interface ModelConfig {
   top_p?: number | null;
 }
 
+export interface AgentCreateResponse {
+  code?: number;
+
+  /**
+   * AI 角色，在 sqlalchemy 模型基础上添加额外多表查询来的数据
+   */
+  data?: Agent | { [key: string]: unknown } | null;
+
+  message?: string;
+}
+
 export interface AgentListResponse {
   code?: number;
 
@@ -644,6 +654,7 @@ export declare namespace Agents {
     type APIResponseAgent as APIResponseAgent,
     type APIResponsePaginationDataAgent as APIResponsePaginationDataAgent,
     type ModelConfig as ModelConfig,
+    type AgentCreateResponse as AgentCreateResponse,
     type AgentListResponse as AgentListResponse,
     type AgentCreateParams as AgentCreateParams,
     type AgentUpdateParams as AgentUpdateParams,

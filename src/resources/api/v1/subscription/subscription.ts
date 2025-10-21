@@ -105,12 +105,17 @@ export namespace APIResponseSubscriptionStatus {
     subscription_status: string;
 
     /**
-     * Agent 创建数量限制
+     * 24 小时内 Agent 创建数量限制
+     */
+    agent_creation_24h_limit?: number | null;
+
+    /**
+     * Agent 创建数量限制（已废弃，使用 agent_creation_24h_limit）
      */
     agent_creation_limit?: number;
 
     /**
-     * 每日背景图生成次数限制
+     * 每日背景图生成次数限制（已废弃，使用 image_gen_24h_limit）
      */
     background_generation_limit_per_day?: number;
 
@@ -148,6 +153,11 @@ export namespace APIResponseSubscriptionStatus {
      * 是否曾经有过订阅记录
      */
     has_ever_subscribed?: boolean;
+
+    /**
+     * 24 小时内图片生成次数限制
+     */
+    image_gen_24h_limit?: number | null;
 
     /**
      * 订阅计划响应模型

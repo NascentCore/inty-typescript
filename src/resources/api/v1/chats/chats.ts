@@ -101,9 +101,15 @@ export interface Chat {
 
   agent_background?: string | null;
 
+  agent_intro?: string | null;
+
   agent_is_deleted?: boolean | null;
 
   agent_name?: string | null;
+
+  agent_opening?: string | null;
+
+  agent_opening_audio_url?: string | null;
 
   last_message?: string | null;
 
