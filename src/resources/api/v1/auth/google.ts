@@ -67,6 +67,8 @@ export namespace GoogleLoginResponse {
 
       age_group?: string | null;
 
+      description?: string | null;
+
       /**
        * 性别
        */
