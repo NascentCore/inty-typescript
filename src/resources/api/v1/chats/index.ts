@@ -14,8 +14,10 @@ export {
   Chats,
   type Chat,
   type ChatListResponse,
+  type ChatGenerateImageResponse,
   type ChatRetrieveVoiceResponse,
   type ChatCreateParams,
   type ChatListParams,
   type ChatCreateCompletionParams,
+  type ChatGenerateImageParams,
 } from './chats';

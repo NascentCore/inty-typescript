@@ -1,7 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../../../core/resource';
-import * as AgentsAPI from './agents';
+import * as AgentsAPI from './agents/agents';
 import {
   APIResponseAgent,
   APIResponsePaginationDataAgent,
@@ -18,7 +18,7 @@ import {
   AgentVisibility,
   Agents,
   ModelConfig,
-} from './agents';
+} from './agents/agents';
 
 export class AI extends APIResource {
   agents: AgentsAPI.Agents = new AgentsAPI.Agents(this._client);

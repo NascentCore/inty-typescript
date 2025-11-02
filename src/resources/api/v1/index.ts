@@ -6,10 +6,12 @@ export {
   Chats,
   type Chat,
   type ChatListResponse,
+  type ChatGenerateImageResponse,
   type ChatRetrieveVoiceResponse,
   type ChatCreateParams,
   type ChatListParams,
   type ChatCreateCompletionParams,
+  type ChatGenerateImageParams,
 } from './chats/index';
 export { Report, type APIResponseDict, type ReportCreateResponse, type ReportCreateParams } from './report';
 export { Settings, type SettingUpdateParams } from './settings';

@@ -83,6 +83,27 @@ describe('resource chats', () => {
   });
 
   // Prism tests are disabled
+  test.skip('generateImage: only required params', async () => {
+    const responsePromise = client.api.v1.chats.generateImage('agent_id', { message_id: 0 });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('generateImage: required and optional params', async () => {
+    const response = await client.api.v1.chats.generateImage('agent_id', {
+      message_id: 0,
+      history_count: 0,
+      request_id: 'request_id',
+    });
+  });
+
+  // Prism tests are disabled
   test.skip('retrieveVoice', async () => {
     const responsePromise = client.api.v1.chats.retrieveVoice('voice_id');
     const rawResponse = await responsePromise.asResponse();
