@@ -76,6 +76,27 @@ export class Chats extends APIResource {
   }
 
   /**
+   * 根据 Agent 角色、聊天历史和用户消息生成图片，并保存到聊天历史中。注意：路径参数
+   * `agent_id` 仅作为目前的名称，实际应为 `chat_id`。未来如需扩展可直接重命名。agent
+   * id 则代表与该 agent 的*当前*会话的 id
+   *
+   * @example
+   * ```ts
+   * const response = await client.api.v1.chats.generateImage(
+   *   'agent_id',
+   *   { message_id: 0 },
+   * );
+   * ```
+   */
+  generateImage(
+    agentID: string,
+    body: ChatGenerateImageParams,
+    options?: RequestOptions,
+  ): APIPromise<ChatGenerateImageResponse> {
+    return this._client.post(path`/api/v1/chat/images/${agentID}`, { body, ...options });
+  }
+
+  /**
    * Get voice info by voice_id
    *
    * @deprecated
@@ -125,6 +146,47 @@ export interface Chat {
 
 export type ChatListResponse = Array<Chat>;
 
+export interface ChatGenerateImageResponse {
+  code?: number;
+
+  /**
+   * 聊天生图响应
+   */
+  data?:
+    | ChatGenerateImageResponse.ChatImageGenerationResponse
+    | ChatGenerateImageResponse.UsageLimitExceeded
+    | null;
+
+  message?: string;
+}
+
+export namespace ChatGenerateImageResponse {
+  /**
+   * 聊天生图响应
+   */
+  export interface ChatImageGenerationResponse {
+    image_metadata: { [key: string]: unknown };
+
+    image_url: string;
+
+    message_id: number;
+
+    prompt: string;
+  }
+
+  export interface UsageLimitExceeded {
+    code: number;
+
+    daily_limit: number;
+
+    error_code: string;
+
+    message: string;
+
+    used_count: number;
+  }
+}
+
 export type ChatRetrieveVoiceResponse = unknown;
 
 export interface ChatCreateParams {
@@ -159,16 +221,26 @@ export namespace ChatCreateCompletionParams {
   }
 }
 
+export interface ChatGenerateImageParams {
+  message_id: number;
+
+  history_count?: number | null;
+
+  request_id?: string | null;
+}
+
 Chats.Agents = Agents;
 
 export declare namespace Chats {
   export {
     type Chat as Chat,
     type ChatListResponse as ChatListResponse,
+    type ChatGenerateImageResponse as ChatGenerateImageResponse,
     type ChatRetrieveVoiceResponse as ChatRetrieveVoiceResponse,
     type ChatCreateParams as ChatCreateParams,
     type ChatListParams as ChatListParams,
     type ChatCreateCompletionParams as ChatCreateCompletionParams,
+    type ChatGenerateImageParams as ChatGenerateImageParams,
   };
 
   export {

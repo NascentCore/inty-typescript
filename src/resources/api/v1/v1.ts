@@ -18,6 +18,8 @@ import {
   Chat,
   ChatCreateCompletionParams,
   ChatCreateParams,
+  ChatGenerateImageParams,
+  ChatGenerateImageResponse,
   ChatListParams,
   ChatListResponse,
   ChatRetrieveVoiceResponse,
@@ -217,10 +219,12 @@ export declare namespace V1 {
     Chats as Chats,
     type Chat as Chat,
     type ChatListResponse as ChatListResponse,
+    type ChatGenerateImageResponse as ChatGenerateImageResponse,
     type ChatRetrieveVoiceResponse as ChatRetrieveVoiceResponse,
     type ChatCreateParams as ChatCreateParams,
     type ChatListParams as ChatListParams,
     type ChatCreateCompletionParams as ChatCreateCompletionParams,
+    type ChatGenerateImageParams as ChatGenerateImageParams,
   };
 
   export {

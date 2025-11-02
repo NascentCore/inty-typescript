@@ -82,27 +82,41 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/api/v1/ai/agents.ts">Agent</a></code>
-- <code><a href="./src/resources/api/v1/ai/agents.ts">AgentMetaData</a></code>
-- <code><a href="./src/resources/api/v1/ai/agents.ts">AgentVisibility</a></code>
-- <code><a href="./src/resources/api/v1/ai/agents.ts">APIResponseAgent</a></code>
-- <code><a href="./src/resources/api/v1/ai/agents.ts">APIResponsePaginationDataAgent</a></code>
-- <code><a href="./src/resources/api/v1/ai/agents.ts">ModelConfig</a></code>
-- <code><a href="./src/resources/api/v1/ai/agents.ts">AgentCreateResponse</a></code>
-- <code><a href="./src/resources/api/v1/ai/agents.ts">AgentListResponse</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">Agent</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">AgentMetaData</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">AgentVisibility</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">APIResponseAgent</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">APIResponsePaginationDataAgent</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">ModelConfig</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">AgentCreateResponse</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/agents.ts">AgentListResponse</a></code>
 
 Methods:
 
-- <code title="post /api/v1/ai/agents">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">create</a>({ ...params }) -> AgentCreateResponse</code>
-- <code title="get /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">retrieve</a>(agentID) -> Agent</code>
-- <code title="put /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">update</a>(agentID, { ...params }) -> Agent</code>
-- <code title="get /api/v1/ai/agents/me">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">list</a>({ ...params }) -> AgentListResponse</code>
-- <code title="delete /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">delete</a>(agentID) -> APIResponseAgent</code>
-- <code title="post /api/v1/ai/agents/{agent_id}/follow">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">followAgent</a>(agentID) -> APIResponseDict</code>
-- <code title="get /api/v1/ai/agents/following">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">following</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
-- <code title="get /api/v1/ai/agents/recommend">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">recommend</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
-- <code title="get /api/v1/ai/agents/search">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">search</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
-- <code title="delete /api/v1/ai/agents/{agent_id}/follow">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents.ts">unfollowAgent</a>(agentID) -> APIResponseDict</code>
+- <code title="post /api/v1/ai/agents">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">create</a>({ ...params }) -> AgentCreateResponse</code>
+- <code title="get /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">retrieve</a>(agentID) -> Agent</code>
+- <code title="put /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">update</a>(agentID, { ...params }) -> Agent</code>
+- <code title="get /api/v1/ai/agents/me">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">list</a>({ ...params }) -> AgentListResponse</code>
+- <code title="delete /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">delete</a>(agentID) -> APIResponseAgent</code>
+- <code title="post /api/v1/ai/agents/{agent_id}/follow">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">followAgent</a>(agentID) -> APIResponseDict</code>
+- <code title="get /api/v1/ai/agents/following">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">following</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
+- <code title="get /api/v1/ai/agents/recommend">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">recommend</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
+- <code title="get /api/v1/ai/agents/search">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">search</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
+- <code title="delete /api/v1/ai/agents/{agent_id}/follow">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">unfollowAgent</a>(agentID) -> APIResponseDict</code>
+
+##### ImageGeneration
+
+###### Config
+
+Types:
+
+- <code><a href="./src/resources/api/v1/ai/agents/image-generation/config.ts">ConfigRetrieveResponse</a></code>
+- <code><a href="./src/resources/api/v1/ai/agents/image-generation/config.ts">ConfigUpdateResponse</a></code>
+
+Methods:
+
+- <code title="get /api/v1/ai/agents/image-generation/config">client.api.v1.ai.agents.imageGeneration.config.<a href="./src/resources/api/v1/ai/agents/image-generation/config.ts">retrieve</a>() -> ConfigRetrieveResponse</code>
+- <code title="put /api/v1/ai/agents/image-generation/config">client.api.v1.ai.agents.imageGeneration.config.<a href="./src/resources/api/v1/ai/agents/image-generation/config.ts">update</a>({ ...params }) -> ConfigUpdateResponse</code>
 
 ### Settings
 
@@ -181,6 +195,7 @@ Types:
 
 - <code><a href="./src/resources/api/v1/chats/chats.ts">Chat</a></code>
 - <code><a href="./src/resources/api/v1/chats/chats.ts">ChatListResponse</a></code>
+- <code><a href="./src/resources/api/v1/chats/chats.ts">ChatGenerateImageResponse</a></code>
 - <code><a href="./src/resources/api/v1/chats/chats.ts">ChatRetrieveVoiceResponse</a></code>
 
 Methods:
@@ -189,6 +204,7 @@ Methods:
 - <code title="get /api/v1/chats/">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">list</a>({ ...params }) -> ChatListResponse</code>
 - <code title="delete /api/v1/chats/{chat_id}">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">delete</a>(chatID) -> Chat</code>
 - <code title="post /api/v1/chat/completions/{agent_id}">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">createCompletion</a>(agentID, { ...params }) -> APIResponseDict</code>
+- <code title="post /api/v1/chat/images/{agent_id}">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">generateImage</a>(agentID, { ...params }) -> ChatGenerateImageResponse</code>
 - <code title="get /api/v1/chats/voices/{voice_id}">client.api.v1.chats.<a href="./src/resources/api/v1/chats/chats.ts">retrieveVoice</a>(voiceID) -> unknown</code>
 
 #### Agents
