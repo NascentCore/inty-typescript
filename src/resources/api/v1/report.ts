@@ -49,6 +49,8 @@ export interface ReportCreateParams {
 
   image_urls?: Array<string> | null;
 
+  report_type?: 'REPORT' | 'FEEDBACK' | null;
+
   request_id?: string | null;
 }
 

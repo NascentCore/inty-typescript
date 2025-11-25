@@ -122,6 +122,10 @@ export interface Chat {
 
   agent_background?: string | null;
 
+  agent_background_animated?: string | null;
+
+  agent_extensions?: { [key: string]: unknown } | null;
+
   agent_intro?: string | null;
 
   agent_is_deleted?: boolean | null;
@@ -155,6 +159,7 @@ export interface ChatGenerateImageResponse {
   data?:
     | ChatGenerateImageResponse.ChatImageGenerationResponse
     | ChatGenerateImageResponse.UsageLimitExceeded
+    | ChatGenerateImageResponse.BizError
     | null;
 
   message?: string;
@@ -184,6 +189,17 @@ export namespace ChatGenerateImageResponse {
     message: string;
 
     used_count: number;
+  }
+
+  /**
+   * 业务错误信息模型
+   */
+  export interface BizError {
+    code: number;
+
+    error_code: string;
+
+    message: string;
   }
 }
 

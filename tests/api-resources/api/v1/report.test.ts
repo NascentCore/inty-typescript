@@ -32,6 +32,7 @@ describe('resource report', () => {
       target_type: 'USER',
       description: 'description',
       image_urls: ['string'],
+      report_type: 'REPORT',
       request_id: 'request_id',
     });
   });
