@@ -12,7 +12,7 @@ export class Version extends APIResource {
    * 通过 HTTP 头传递版本信息：
    *
    * - appVersionCode: 应用版本代码（必填，整数）
-   * - appVersionName: 应用版本名称（可选，字符串）
+   * - appVersionName: 应用版本名称（可选，后端会忽略，保留向后兼容）
    *
    * @example
    * ```ts
@@ -116,7 +116,7 @@ export interface VersionCheckParams {
   appVersionCode: number;
 
   /**
-   * 应用版本名称（可选）
+   * 应用版本名称（向后兼容，忽略）
    */
   appVersionName?: string;
 }

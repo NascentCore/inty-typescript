@@ -28,6 +28,7 @@ describe('resource agents', () => {
       alternate_greetings: ['string'],
       avatar: 'avatar',
       background: 'background',
+      background_animated: 'background_animated',
       background_images: ['string'],
       category: 'category',
       character_book: { foo: 'bar' },
