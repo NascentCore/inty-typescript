@@ -8,11 +8,10 @@ export class Deletion extends APIResource {
   /**
    * 检查用户是否可以删除账户
    *
-   * @example
-   * ```ts
-   * const response =
-   *   await client.api.v1.users.deletion.checkEligibility();
-   * ```
+   * .. deprecated:: 此端点已废弃，请使用 POST /api/v1/users/delete-account 端点。 删
+   * 除账户时会自动执行相同的检查。
+   *
+   * @deprecated
    */
   checkEligibility(options?: RequestOptions): APIPromise<DeletionCheckEligibilityResponse> {
     return this._client.get('/api/v1/users/deletion/check', options);

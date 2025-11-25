@@ -24,78 +24,9 @@ export class Chat extends APIResource {
 export interface ChatSendMessageResponse {
   code?: number;
 
-  /**
-   * OpenAI-style chat completion response model
-   */
-  data?: ChatSendMessageResponse.Data | null;
+  data?: unknown;
 
   message?: string;
-}
-
-export namespace ChatSendMessageResponse {
-  /**
-   * OpenAI-style chat completion response model
-   */
-  export interface Data {
-    id: string;
-
-    choices: Array<Data.Choice>;
-
-    created: number;
-
-    model: string;
-
-    /**
-     * Token usage model for OpenAI-style responses
-     */
-    usage: Data.Usage;
-  }
-
-  export namespace Data {
-    /**
-     * Chat choice model for OpenAI-style responses
-     */
-    export interface Choice {
-      finish_reason: string;
-
-      index: number;
-
-      /**
-       * Chat message model for OpenAI-style responses
-       */
-      message: Choice.Message;
-    }
-
-    export namespace Choice {
-      /**
-       * Chat message model for OpenAI-style responses
-       */
-      export interface Message {
-        content: string;
-
-        role: string;
-
-        id?: number | null;
-
-        audio_url?: string | null;
-
-        meta_data?: { [key: string]: unknown } | null;
-
-        timestamp?: string | null;
-      }
-    }
-
-    /**
-     * Token usage model for OpenAI-style responses
-     */
-    export interface Usage {
-      completion_tokens: number;
-
-      prompt_tokens: number;
-
-      total_tokens: number;
-    }
-  }
 }
 
 export interface ChatSendMessageParams {

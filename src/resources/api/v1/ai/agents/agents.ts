@@ -180,6 +180,8 @@ export interface Agent {
    */
   status: 'PENDING' | 'APPROVED' | 'REJECTED';
 
+  version: number;
+
   alternate_greetings?: Array<string> | null;
 
   avatar?: string | null;
@@ -190,6 +192,8 @@ export interface Agent {
   avatar_size?: Agent.AvatarSize | null;
 
   background?: string | null;
+
+  background_animated?: string | null;
 
   background_images?: Array<string> | null;
 
@@ -236,7 +240,8 @@ export interface Agent {
   llm_config?: ModelConfig | null;
 
   /**
-   * 主提示词 - 作为第一个 system message，覆盖全局默认主提示词
+   * 主提示词 - 作为第一个 system message，覆盖全局默认主提示词。可以是预设 ID 或自定
+   * 义文本
    */
   main_prompt?: string | null;
 
@@ -251,7 +256,8 @@ export interface Agent {
   meta_data?: AgentMetaData | null;
 
   /**
-   * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词
+   * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词。可以是预设 ID 或自定
+   * 义文本
    */
   mode_prompt?: string | null;
 
@@ -438,6 +444,8 @@ export interface AgentCreateParams {
 
   background?: string | null;
 
+  background_animated?: string | null;
+
   background_images?: Array<string> | null;
 
   category?: string | null;
@@ -463,7 +471,8 @@ export interface AgentCreateParams {
   llm_config?: ModelConfig | null;
 
   /**
-   * 主提示词 - 作为第一个 system message，覆盖全局默认主提示词
+   * 主提示词 - 作为第一个 system message，覆盖全局默认主提示词。可以是预设 ID 或自定
+   * 义文本
    */
   main_prompt?: string | null;
 
@@ -478,7 +487,8 @@ export interface AgentCreateParams {
   meta_data?: AgentMetaData | null;
 
   /**
-   * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词
+   * 模式提示词 - 放在角色卡提示词后面，覆盖全局默认模式提示词。可以是预设 ID 或自定
+   * 义文本
    */
   mode_prompt?: string | null;
 
@@ -525,6 +535,8 @@ export interface AgentUpdateParams {
   avatar?: string | null;
 
   background?: string | null;
+
+  background_animated?: string | null;
 
   background_images?: Array<string> | null;
 
