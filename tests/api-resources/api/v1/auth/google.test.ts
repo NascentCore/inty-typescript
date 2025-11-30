@@ -9,8 +9,8 @@ const client = new Inty({
 
 describe('resource google', () => {
   // Prism tests are disabled
-  test.skip('login: only required params', async () => {
-    const responsePromise = client.api.v1.auth.google.login({ id_token: 'id_token' });
+  test.skip('login', async () => {
+    const responsePromise = client.api.v1.auth.google.login({});
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -18,14 +18,5 @@ describe('resource google', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('login: required and optional params', async () => {
-    const response = await client.api.v1.auth.google.login({
-      id_token: 'id_token',
-      request_id: 'request_id',
-      user_info: { age_group: 'age_group', gender: 'MALE', system_language: 'system_language' },
-    });
   });
 });
