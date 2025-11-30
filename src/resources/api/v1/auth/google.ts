@@ -7,13 +7,11 @@ import { RequestOptions } from '../../../../internal/request-options';
 
 export class Google extends APIResource {
   /**
-   * Google 登录
+   * Google 登录或 Email 密码登录
    *
    * @example
    * ```ts
-   * const response = await client.api.v1.auth.google.login({
-   *   id_token: 'id_token',
-   * });
+   * const response = await client.api.v1.auth.google.login();
    * ```
    */
   login(body: GoogleLoginParams, options?: RequestOptions): APIPromise<GoogleLoginResponse> {
@@ -55,9 +53,7 @@ export namespace GoogleLoginResponse {
       /**
        * 认证类型
        */
-      auth_type: 'PHONE' | 'GOOGLE' | 'GUEST';
-
-      avatar: string;
+      auth_type: 'PHONE' | 'GOOGLE' | 'GUEST' | 'EMAIL';
 
       email: string;
 
@@ -66,6 +62,8 @@ export namespace GoogleLoginResponse {
       nickname: string;
 
       age_group?: string | null;
+
+      avatar?: string | null;
 
       description?: string | null;
 
@@ -82,7 +80,11 @@ export namespace GoogleLoginResponse {
 }
 
 export interface GoogleLoginParams {
-  id_token: string;
+  email?: string | null;
+
+  id_token?: string | null;
+
+  password?: string | null;
 
   request_id?: string | null;
 
