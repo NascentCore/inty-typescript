@@ -10,11 +10,7 @@ const client = new Inty({
 describe('resource report', () => {
   // Prism tests are disabled
   test.skip('create: only required params', async () => {
-    const responsePromise = client.api.v1.report.create({
-      reason_ids: [0],
-      target_id: 'target_id',
-      target_type: 'USER',
-    });
+    const responsePromise = client.api.v1.report.create({ target_id: 'target_id', target_type: 'USER' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -27,11 +23,12 @@ describe('resource report', () => {
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.api.v1.report.create({
-      reason_ids: [0],
       target_id: 'target_id',
       target_type: 'USER',
       description: 'description',
       image_urls: ['string'],
+      reason_codes: ['SENSITIVE_CONTENT'],
+      reason_ids: [0],
       report_type: 'REPORT',
       request_id: 'request_id',
     });
