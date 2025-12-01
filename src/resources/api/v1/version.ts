@@ -106,6 +106,11 @@ export namespace VersionCheckResponse {
      * 最新版本代码
      */
     latest_version_code?: number | null;
+
+    /**
+     * 客户端需要展示的提醒类型
+     */
+    reminder_action?: 'POP_UP_REMINDER' | 'SETTINGS_REMINDER' | 'BLOCK_ACCESS' | null;
   }
 }
 

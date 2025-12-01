@@ -76,6 +76,7 @@ describe('resource chats', () => {
     const response = await client.api.v1.chats.createCompletion('agent_id', {
       messages: [{ content: 'content', role: 'role' }],
       language: 'language',
+      message_id: 'message_id',
       model: 'model',
       request_id: 'request_id',
       stream: true,
