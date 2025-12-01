@@ -27,6 +27,7 @@ describe('resource chat', () => {
     const response = await client.v2.chat.sendMessage('agent_id', {
       messages: [{ content: 'content', role: 'role' }],
       language: 'language',
+      message_id: 'message_id',
       model: 'model',
       request_id: 'request_id',
       stream: true,

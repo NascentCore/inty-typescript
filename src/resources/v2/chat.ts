@@ -34,6 +34,8 @@ export interface ChatSendMessageParams {
 
   language?: string;
 
+  message_id?: string | null;
+
   model?: string;
 
   request_id?: string | null;
