@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.24.0 (2025-12-02)
+
+Full Changelog: [v0.23.0...v0.24.0](https://github.com/NascentCore/inty-typescript/compare/v0.23.0...v0.24.0)
+
+### Features
+
+* **api:** manual updates ([aa12c13](https://github.com/NascentCore/inty-typescript/commit/aa12c134fba22c659e337f76a2574e834d1df239))
+
+
+### Chores
+
+* **client:** fix logger property type ([604cf46](https://github.com/NascentCore/inty-typescript/commit/604cf46e00e8f17aaa22abe5c480df74715c1eac))
+
 ## 0.23.0 (2025-12-01)
 
 Full Changelog: [v0.22.0...v0.23.0](https://github.com/NascentCore/inty-typescript/compare/v0.22.0...v0.23.0)
