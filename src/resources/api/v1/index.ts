@@ -3,6 +3,13 @@
 export { AI } from './ai/index';
 export { Auth, type AuthCreateGuestResponse, type AuthCreateGuestParams } from './auth/index';
 export {
+  CharacterThemes,
+  type APIResponseListCharacterTheme,
+  type CharacterTheme,
+  type CharacterThemeVisibility,
+  type CharacterThemeListParams,
+} from './character-themes';
+export {
   Chats,
   type Chat,
   type ChatListResponse,

@@ -1,6 +1,14 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../../core/resource';
+import * as CharacterThemesAPI from './character-themes';
+import {
+  APIResponseListCharacterTheme,
+  CharacterTheme,
+  CharacterThemeListParams,
+  CharacterThemeVisibility,
+  CharacterThemes,
+} from './character-themes';
 import * as ReportAPI from './report';
 import { APIResponseDict, Report, ReportCreateParams, ReportCreateResponse } from './report';
 import * as SettingsAPI from './settings';
@@ -53,6 +61,7 @@ export class V1 extends APIResource {
   version: VersionAPI.Version = new VersionAPI.Version(this._client);
   chats: ChatsAPI.Chats = new ChatsAPI.Chats(this._client);
   textToSpeech: TextToSpeechAPI.TextToSpeech = new TextToSpeechAPI.TextToSpeech(this._client);
+  characterThemes: CharacterThemesAPI.CharacterThemes = new CharacterThemesAPI.CharacterThemes(this._client);
 
   /**
    * 分页查询用户的消息列表；返回用户收到的通知。
@@ -167,6 +176,7 @@ V1.Subscription = Subscription;
 V1.Version = Version;
 V1.Chats = Chats;
 V1.TextToSpeech = TextToSpeech;
+V1.CharacterThemes = CharacterThemes;
 
 export declare namespace V1 {
   export {
@@ -231,5 +241,13 @@ export declare namespace V1 {
     TextToSpeech as TextToSpeech,
     type TextToSpeechListVoicesResponse as TextToSpeechListVoicesResponse,
     type TextToSpeechListVoicesParams as TextToSpeechListVoicesParams,
+  };
+
+  export {
+    CharacterThemes as CharacterThemes,
+    type APIResponseListCharacterTheme as APIResponseListCharacterTheme,
+    type CharacterTheme as CharacterTheme,
+    type CharacterThemeVisibility as CharacterThemeVisibility,
+    type CharacterThemeListParams as CharacterThemeListParams,
   };
 }
