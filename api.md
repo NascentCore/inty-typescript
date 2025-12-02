@@ -233,6 +233,18 @@ Methods:
 
 - <code title="get /api/v1/text-to-speech/list-voices">client.api.v1.textToSpeech.<a href="./src/resources/api/v1/text-to-speech.ts">listVoices</a>({ ...params }) -> TextToSpeechListVoicesResponse</code>
 
+### CharacterThemes
+
+Types:
+
+- <code><a href="./src/resources/api/v1/character-themes.ts">APIResponseListCharacterTheme</a></code>
+- <code><a href="./src/resources/api/v1/character-themes.ts">CharacterTheme</a></code>
+- <code><a href="./src/resources/api/v1/character-themes.ts">CharacterThemeVisibility</a></code>
+
+Methods:
+
+- <code title="get /api/v1/character-themes/">client.api.v1.characterThemes.<a href="./src/resources/api/v1/character-themes.ts">list</a>({ ...params }) -> APIResponseListCharacterTheme</code>
+
 # V2
 
 ## Chat
