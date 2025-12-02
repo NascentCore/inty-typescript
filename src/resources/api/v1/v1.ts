@@ -5,6 +5,7 @@ import * as CharacterThemesAPI from './character-themes';
 import {
   APIResponseListCharacterTheme,
   CharacterTheme,
+  CharacterThemeAgent,
   CharacterThemeListParams,
   CharacterThemeVisibility,
   CharacterThemes,
@@ -247,6 +248,7 @@ export declare namespace V1 {
     CharacterThemes as CharacterThemes,
     type APIResponseListCharacterTheme as APIResponseListCharacterTheme,
     type CharacterTheme as CharacterTheme,
+    type CharacterThemeAgent as CharacterThemeAgent,
     type CharacterThemeVisibility as CharacterThemeVisibility,
     type CharacterThemeListParams as CharacterThemeListParams,
   };
