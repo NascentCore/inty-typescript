@@ -239,6 +239,7 @@ Types:
 
 - <code><a href="./src/resources/api/v1/character-themes.ts">APIResponseListCharacterTheme</a></code>
 - <code><a href="./src/resources/api/v1/character-themes.ts">CharacterTheme</a></code>
+- <code><a href="./src/resources/api/v1/character-themes.ts">CharacterThemeAgent</a></code>
 - <code><a href="./src/resources/api/v1/character-themes.ts">CharacterThemeVisibility</a></code>
 
 Methods:
