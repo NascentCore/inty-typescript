@@ -59,7 +59,7 @@ export interface CharacterTheme {
   /**
    * 专区中的角色列表（按顺序）
    */
-  agents?: Array<CharacterTheme.Agent>;
+  agents?: Array<CharacterThemeAgent>;
 
   /**
    * 背景图 URL 地址
@@ -77,26 +77,24 @@ export interface CharacterTheme {
   updated_at?: string | null;
 }
 
-export namespace CharacterTheme {
+/**
+ * 专区中的角色信息
+ */
+export interface CharacterThemeAgent {
   /**
-   * 专区中的角色信息
+   * 角色 ID
    */
-  export interface Agent {
-    /**
-     * 角色 ID
-     */
-    agent_id: string;
+  agent_id: string;
 
-    /**
-     * 角色在专区中的顺序（从 0 开始）
-     */
-    order_index: number;
+  /**
+   * 角色在专区中的顺序（从 0 开始）
+   */
+  order_index: number;
 
-    /**
-     * AI 角色，在 sqlalchemy 模型基础上添加额外多表查询来的数据
-     */
-    agent?: AgentsAPI.Agent | null;
-  }
+  /**
+   * AI 角色，在 sqlalchemy 模型基础上添加额外多表查询来的数据
+   */
+  agent?: AgentsAPI.Agent | null;
 }
 
 /**
@@ -125,6 +123,7 @@ export declare namespace CharacterThemes {
   export {
     type APIResponseListCharacterTheme as APIResponseListCharacterTheme,
     type CharacterTheme as CharacterTheme,
+    type CharacterThemeAgent as CharacterThemeAgent,
     type CharacterThemeVisibility as CharacterThemeVisibility,
     type CharacterThemeListParams as CharacterThemeListParams,
   };

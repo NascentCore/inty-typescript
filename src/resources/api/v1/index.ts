@@ -6,6 +6,7 @@ export {
   CharacterThemes,
   type APIResponseListCharacterTheme,
   type CharacterTheme,
+  type CharacterThemeAgent,
   type CharacterThemeVisibility,
   type CharacterThemeListParams,
 } from './character-themes';
