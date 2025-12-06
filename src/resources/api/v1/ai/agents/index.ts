@@ -13,7 +13,6 @@ export {
   type AgentCreateParams,
   type AgentUpdateParams,
   type AgentListParams,
-  type AgentFollowingParams,
   type AgentRecommendParams,
   type AgentSearchParams,
 } from './agents';
