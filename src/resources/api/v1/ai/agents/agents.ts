@@ -2,7 +2,6 @@
 
 import { APIResource } from '../../../../../core/resource';
 import * as AgentsAPI from './agents';
-import * as ReportAPI from '../../report';
 import * as ProfileAPI from '../../users/profile';
 import * as ImageGenerationAPI from './image-generation/image-generation';
 import { ImageGeneration } from './image-generation/image-generation';
@@ -88,35 +87,6 @@ export class Agents extends APIResource {
   }
 
   /**
-   * Follow AI agent
-   *
-   * @example
-   * ```ts
-   * const apiResponseDict =
-   *   await client.api.v1.ai.agents.followAgent('agent_id');
-   * ```
-   */
-  followAgent(agentID: string, options?: RequestOptions): APIPromise<ReportAPI.APIResponseDict> {
-    return this._client.post(path`/api/v1/ai/agents/${agentID}/follow`, options);
-  }
-
-  /**
-   * Get current user's followed AI agents list
-   *
-   * @example
-   * ```ts
-   * const apiResponsePaginationDataAgent =
-   *   await client.api.v1.ai.agents.following();
-   * ```
-   */
-  following(
-    query: AgentFollowingParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<APIResponsePaginationDataAgent> {
-    return this._client.get('/api/v1/ai/agents/following', { query, ...options });
-  }
-
-  /**
    * Get recommended AI agents list (public and approved agents), sort_seed is
    * required when sort is random, which is used to ensure deterministic order for
    * the random sort option
@@ -145,19 +115,6 @@ export class Agents extends APIResource {
    */
   search(query: AgentSearchParams, options?: RequestOptions): APIPromise<APIResponsePaginationDataAgent> {
     return this._client.get('/api/v1/ai/agents/search', { query, ...options });
-  }
-
-  /**
-   * Unfollow AI agent
-   *
-   * @example
-   * ```ts
-   * const apiResponseDict =
-   *   await client.api.v1.ai.agents.unfollowAgent('agent_id');
-   * ```
-   */
-  unfollowAgent(agentID: string, options?: RequestOptions): APIPromise<ReportAPI.APIResponseDict> {
-    return this._client.delete(path`/api/v1/ai/agents/${agentID}/follow`, options);
   }
 }
 
@@ -611,18 +568,6 @@ export interface AgentListParams {
   skip?: number;
 }
 
-export interface AgentFollowingParams {
-  /**
-   * Page number, starting from 1
-   */
-  page?: number;
-
-  /**
-   * Items per page, maximum 100
-   */
-  page_size?: number;
-}
-
 export interface AgentRecommendParams {
   /**
    * Page number, starting from 1
@@ -677,7 +622,6 @@ export declare namespace Agents {
     type AgentCreateParams as AgentCreateParams,
     type AgentUpdateParams as AgentUpdateParams,
     type AgentListParams as AgentListParams,
-    type AgentFollowingParams as AgentFollowingParams,
     type AgentRecommendParams as AgentRecommendParams,
     type AgentSearchParams as AgentSearchParams,
   };

@@ -98,11 +98,8 @@ Methods:
 - <code title="put /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">update</a>(agentID, { ...params }) -> Agent</code>
 - <code title="get /api/v1/ai/agents/me">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">list</a>({ ...params }) -> AgentListResponse</code>
 - <code title="delete /api/v1/ai/agents/{agent_id}">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">delete</a>(agentID) -> APIResponseAgent</code>
-- <code title="post /api/v1/ai/agents/{agent_id}/follow">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">followAgent</a>(agentID) -> APIResponseDict</code>
-- <code title="get /api/v1/ai/agents/following">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">following</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
 - <code title="get /api/v1/ai/agents/recommend">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">recommend</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
 - <code title="get /api/v1/ai/agents/search">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">search</a>({ ...params }) -> APIResponsePaginationDataAgent</code>
-- <code title="delete /api/v1/ai/agents/{agent_id}/follow">client.api.v1.ai.agents.<a href="./src/resources/api/v1/ai/agents/agents.ts">unfollowAgent</a>(agentID) -> APIResponseDict</code>
 
 ##### ImageGeneration
 
