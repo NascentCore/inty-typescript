@@ -580,9 +580,9 @@ export interface AgentRecommendParams {
   page_size?: number;
 
   /**
-   * Sort order: created_asc, created_desc, random, score_based_random
+   * Sort order: created_asc, created_desc, random, score_based_random, energy_points
    */
-  sort?: 'created_asc' | 'created_desc' | 'random' | 'score_based_random';
+  sort?: 'created_asc' | 'created_desc' | 'random' | 'score_based_random' | 'energy_points';
 
   /**
    * Sort seed for deterministic random ordering

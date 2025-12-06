@@ -3,8 +3,7 @@
 import { APIResource } from '../../../../core/resource';
 import * as SubscriptionAPI from './subscription';
 import * as AdminAPI from './admin/admin';
-import { Admin, AdminProcessRefundParams, AdminProcessRefundResponse } from './admin/admin';
-import * as PlansAPI from './admin/plans';
+import { Admin } from './admin/admin';
 import { APIPromise } from '../../../../core/api-promise';
 import { RequestOptions } from '../../../../internal/request-options';
 
@@ -162,7 +161,7 @@ export namespace APIResponseSubscriptionStatus {
     /**
      * 订阅计划响应模型
      */
-    plan?: PlansAPI.SubscriptionPlan | null;
+    plan?: Data.Plan | null;
 
     /**
      * 剩余天数
@@ -229,6 +228,82 @@ export namespace APIResponseSubscriptionStatus {
        * 是否启用
        */
       enabled?: boolean;
+    }
+
+    /**
+     * 订阅计划响应模型
+     */
+    export interface Plan {
+      id: string;
+
+      created_at: string;
+
+      /**
+       * Google Play 产品 ID
+       */
+      google_play_product_id: string;
+
+      /**
+       * 计划名称
+       */
+      name: string;
+
+      /**
+       * 计划类型
+       */
+      plan_type: 'MONTHLY' | 'QUARTERLY' | 'YEARLY';
+
+      /**
+       * 价格
+       */
+      price: number;
+
+      /**
+       * Agent 创建数量限制
+       */
+      agent_creation_limit?: number;
+
+      /**
+       * 每日背景图生成次数限制，-1 为无限制
+       */
+      background_generation_limit_per_day?: number;
+
+      /**
+       * 每日聊天次数限制，-1 为无限制
+       */
+      chat_limit_per_day?: number;
+
+      /**
+       * 货币
+       */
+      currency?: string;
+
+      /**
+       * 计划描述
+       */
+      description?: string | null;
+
+      /**
+       * 价格折扣率，范围 0-1，1 表示无折扣
+       */
+      discount_rate?: number;
+
+      /**
+       * 功能权益配置
+       */
+      features?: { [key: string]: unknown } | null;
+
+      /**
+       * 是否激活
+       */
+      is_active?: boolean;
+
+      /**
+       * 排序顺序
+       */
+      sort_order?: number;
+
+      updated_at?: string | null;
     }
   }
 }
@@ -379,7 +454,7 @@ export interface UserSubscription {
   /**
    * 订阅计划响应模型
    */
-  plan?: PlansAPI.SubscriptionPlan | null;
+  plan?: UserSubscription.Plan | null;
 
   /**
    * 开始时间
@@ -397,6 +472,84 @@ export interface UserSubscription {
   trial_end_date?: string | null;
 
   updated_at?: string | null;
+}
+
+export namespace UserSubscription {
+  /**
+   * 订阅计划响应模型
+   */
+  export interface Plan {
+    id: string;
+
+    created_at: string;
+
+    /**
+     * Google Play 产品 ID
+     */
+    google_play_product_id: string;
+
+    /**
+     * 计划名称
+     */
+    name: string;
+
+    /**
+     * 计划类型
+     */
+    plan_type: 'MONTHLY' | 'QUARTERLY' | 'YEARLY';
+
+    /**
+     * 价格
+     */
+    price: number;
+
+    /**
+     * Agent 创建数量限制
+     */
+    agent_creation_limit?: number;
+
+    /**
+     * 每日背景图生成次数限制，-1 为无限制
+     */
+    background_generation_limit_per_day?: number;
+
+    /**
+     * 每日聊天次数限制，-1 为无限制
+     */
+    chat_limit_per_day?: number;
+
+    /**
+     * 货币
+     */
+    currency?: string;
+
+    /**
+     * 计划描述
+     */
+    description?: string | null;
+
+    /**
+     * 价格折扣率，范围 0-1，1 表示无折扣
+     */
+    discount_rate?: number;
+
+    /**
+     * 功能权益配置
+     */
+    features?: { [key: string]: unknown } | null;
+
+    /**
+     * 是否激活
+     */
+    is_active?: boolean;
+
+    /**
+     * 排序顺序
+     */
+    sort_order?: number;
+
+    updated_at?: string | null;
+  }
 }
 
 export interface SubscriptionListPlansResponse {
@@ -418,7 +571,7 @@ export namespace SubscriptionListPlansResponse {
     /**
      * 订阅计划列表
      */
-    plans: Array<PlansAPI.SubscriptionPlan>;
+    plans: Array<Data.Plan>;
 
     /**
      * 用户订阅响应模型
@@ -434,6 +587,84 @@ export namespace SubscriptionListPlansResponse {
      * 最新的订阅计划 ID
      */
     previous_plan_id?: string | null;
+  }
+
+  export namespace Data {
+    /**
+     * 订阅计划响应模型
+     */
+    export interface Plan {
+      id: string;
+
+      created_at: string;
+
+      /**
+       * Google Play 产品 ID
+       */
+      google_play_product_id: string;
+
+      /**
+       * 计划名称
+       */
+      name: string;
+
+      /**
+       * 计划类型
+       */
+      plan_type: 'MONTHLY' | 'QUARTERLY' | 'YEARLY';
+
+      /**
+       * 价格
+       */
+      price: number;
+
+      /**
+       * Agent 创建数量限制
+       */
+      agent_creation_limit?: number;
+
+      /**
+       * 每日背景图生成次数限制，-1 为无限制
+       */
+      background_generation_limit_per_day?: number;
+
+      /**
+       * 每日聊天次数限制，-1 为无限制
+       */
+      chat_limit_per_day?: number;
+
+      /**
+       * 货币
+       */
+      currency?: string;
+
+      /**
+       * 计划描述
+       */
+      description?: string | null;
+
+      /**
+       * 价格折扣率，范围 0-1，1 表示无折扣
+       */
+      discount_rate?: number;
+
+      /**
+       * 功能权益配置
+       */
+      features?: { [key: string]: unknown } | null;
+
+      /**
+       * 是否激活
+       */
+      is_active?: boolean;
+
+      /**
+       * 排序顺序
+       */
+      sort_order?: number;
+
+      updated_at?: string | null;
+    }
   }
 }
 
@@ -509,9 +740,5 @@ export declare namespace Subscription {
     type SubscriptionVerifyParams as SubscriptionVerifyParams,
   };
 
-  export {
-    Admin as Admin,
-    type AdminProcessRefundResponse as AdminProcessRefundResponse,
-    type AdminProcessRefundParams as AdminProcessRefundParams,
-  };
+  export { Admin as Admin };
 }
