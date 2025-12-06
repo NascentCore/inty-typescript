@@ -147,28 +147,6 @@ Methods:
 
 #### Admin
 
-Types:
-
-- <code><a href="./src/resources/api/v1/subscription/admin/admin.ts">AdminProcessRefundResponse</a></code>
-
-Methods:
-
-- <code title="post /api/v1/subscription/admin/refund">client.api.v1.subscription.admin.<a href="./src/resources/api/v1/subscription/admin/admin.ts">processRefund</a>({ ...params }) -> AdminProcessRefundResponse</code>
-
-##### Plans
-
-Types:
-
-- <code><a href="./src/resources/api/v1/subscription/admin/plans.ts">SubscriptionPlan</a></code>
-- <code><a href="./src/resources/api/v1/subscription/admin/plans.ts">SubscriptionPlanType</a></code>
-- <code><a href="./src/resources/api/v1/subscription/admin/plans.ts">PlanCreateResponse</a></code>
-- <code><a href="./src/resources/api/v1/subscription/admin/plans.ts">PlanListResponse</a></code>
-
-Methods:
-
-- <code title="post /api/v1/subscription/admin/plans">client.api.v1.subscription.admin.plans.<a href="./src/resources/api/v1/subscription/admin/plans.ts">create</a>({ ...params }) -> PlanCreateResponse</code>
-- <code title="get /api/v1/subscription/admin/plans">client.api.v1.subscription.admin.plans.<a href="./src/resources/api/v1/subscription/admin/plans.ts">list</a>({ ...params }) -> PlanListResponse</code>
-
 ##### Users
 
 Methods:
