@@ -8,7 +8,6 @@ import {
   Agent,
   AgentCreateParams,
   AgentCreateResponse,
-  AgentFollowingParams,
   AgentListParams,
   AgentListResponse,
   AgentMetaData,
@@ -40,7 +39,6 @@ export declare namespace AI {
     type AgentCreateParams as AgentCreateParams,
     type AgentUpdateParams as AgentUpdateParams,
     type AgentListParams as AgentListParams,
-    type AgentFollowingParams as AgentFollowingParams,
     type AgentRecommendParams as AgentRecommendParams,
     type AgentSearchParams as AgentSearchParams,
   };

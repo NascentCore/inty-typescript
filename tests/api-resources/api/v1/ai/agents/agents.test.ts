@@ -124,38 +124,6 @@ describe('resource agents', () => {
   });
 
   // Prism tests are disabled
-  test.skip('followAgent', async () => {
-    const responsePromise = client.api.v1.ai.agents.followAgent('agent_id');
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('following', async () => {
-    const responsePromise = client.api.v1.ai.agents.following();
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Prism tests are disabled
-  test.skip('following: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.api.v1.ai.agents.following({ page: 1, page_size: 1 }, { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(Inty.NotFoundError);
-  });
-
-  // Prism tests are disabled
   test.skip('recommend', async () => {
     const responsePromise = client.api.v1.ai.agents.recommend();
     const rawResponse = await responsePromise.asResponse();
@@ -193,17 +161,5 @@ describe('resource agents', () => {
   // Prism tests are disabled
   test.skip('search: required and optional params', async () => {
     const response = await client.api.v1.ai.agents.search({ q: 'q', page: 1, page_size: 1 });
-  });
-
-  // Prism tests are disabled
-  test.skip('unfollowAgent', async () => {
-    const responsePromise = client.api.v1.ai.agents.unfollowAgent('agent_id');
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
   });
 });

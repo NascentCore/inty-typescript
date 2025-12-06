@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.26.0 (2025-12-06)
+
+Full Changelog: [v0.25.0...v0.26.0](https://github.com/NascentCore/inty-typescript/compare/v0.25.0...v0.26.0)
+
+### Features
+
+* 清理无效 api 端点 ([2cf2ef9](https://github.com/NascentCore/inty-typescript/commit/2cf2ef9f7cde2cb570b102f33a306dea03c88316))
+
+
+### Bug Fixes
+
+* **mcp:** correct code tool API endpoint ([a869928](https://github.com/NascentCore/inty-typescript/commit/a869928737afdbfff049b47cae02162a57a6e12e))
+* **mcp:** return correct lines on typescript errors ([d67b91a](https://github.com/NascentCore/inty-typescript/commit/d67b91a959977271d3fcb2d10da8d4df35b9e9ca))
+
+
+### Chores
+
+* **internal:** codegen related update ([a4ca339](https://github.com/NascentCore/inty-typescript/commit/a4ca33943df94813a6e661b5b8c4092b4b9977b2))
+* **internal:** codegen related update ([86484a6](https://github.com/NascentCore/inty-typescript/commit/86484a60f85c074b2f07afe228b554830027e16a))
+* **internal:** upgrade eslint ([54a7ee3](https://github.com/NascentCore/inty-typescript/commit/54a7ee32d4cbe5e2e4d1cf3ce4c5f6d319572bb6))
+
 ## 0.25.0 (2025-12-02)
 
 Full Changelog: [v0.24.0...v0.25.0](https://github.com/NascentCore/inty-typescript/compare/v0.24.0...v0.25.0)
