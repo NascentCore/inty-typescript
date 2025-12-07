@@ -53,44 +53,19 @@ export namespace VersionCheckResponse {
    */
   export interface Data {
     /**
+     * 更新日志
+     */
+    changelog?: string | null;
+
+    /**
      * 当前客户端版本
      */
-    current_version: string;
+    current_version?: string | null;
 
     /**
      * 下载链接
      */
-    download_url: string;
-
-    /**
-     * 是否强制更新
-     */
-    force_update: boolean;
-
-    /**
-     * 最新可用版本
-     */
-    latest_version: string;
-
-    /**
-     * 状态消息
-     */
-    message: string;
-
-    /**
-     * 最低支持版本
-     */
-    minimum_version: string;
-
-    /**
-     * 是否需要更新
-     */
-    update_required: boolean;
-
-    /**
-     * 更新日志
-     */
-    changelog?: string | null;
+    download_url?: string | null;
 
     /**
      * 错误信息
@@ -98,9 +73,19 @@ export namespace VersionCheckResponse {
     error?: string | null;
 
     /**
+     * 是否强制更新
+     */
+    force_update?: boolean | null;
+
+    /**
      * 强制更新的具体原因列表
      */
     force_update_reasons?: Array<string> | null;
+
+    /**
+     * 最新可用版本
+     */
+    latest_version?: string | null;
 
     /**
      * 最新版本代码
@@ -108,9 +93,24 @@ export namespace VersionCheckResponse {
     latest_version_code?: number | null;
 
     /**
-     * 客户端需要展示的提醒类型
+     * 状态消息
      */
-    reminder_action?: 'POP_UP_REMINDER' | 'SETTINGS_REMINDER' | 'BLOCK_ACCESS' | null;
+    message?: string | null;
+
+    /**
+     * 最低支持版本
+     */
+    minimum_version?: string | null;
+
+    /**
+     * 客户端需要展示的提醒动作，None 表示无需额外提醒
+     */
+    reminder_action?: 'NONE' | 'SETTINGS_REMINDER' | 'POP_UP_REMINDER' | 'BLOCK_ACCESS';
+
+    /**
+     * 是否需要更新
+     */
+    update_required?: boolean | null;
   }
 }
 
