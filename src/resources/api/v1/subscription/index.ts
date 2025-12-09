@@ -8,6 +8,5 @@ export {
   type UserSubscription,
   type SubscriptionListPlansResponse,
   type SubscriptionVerifyResponse,
-  type SubscriptionWebhookResponse,
   type SubscriptionVerifyParams,
 } from './subscription';

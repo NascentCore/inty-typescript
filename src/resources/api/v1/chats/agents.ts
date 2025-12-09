@@ -9,6 +9,26 @@ import { path } from '../../../../internal/utils/path';
 
 export class Agents extends APIResource {
   /**
+   * Clear chat messages by Agent ID, currently used by inty-eval, probably will be
+   * used by inty app as well.
+   *
+   * @example
+   * ```ts
+   * const response =
+   *   await client.api.v1.chats.agents.clearMessages(
+   *     'agent_id',
+   *   );
+   * ```
+   */
+  clearMessages(
+    agentID: string,
+    body: AgentClearMessagesParams,
+    options?: RequestOptions,
+  ): APIPromise<AgentClearMessagesResponse> {
+    return this._client.post(path`/api/v1/chats/agents/${agentID}/clear-messages`, { body, ...options });
+  }
+
+  /**
    * Generate voice for a message
    *
    * @example
@@ -110,6 +130,23 @@ export interface ChatSettings {
   voice_enabled?: boolean;
 }
 
+/**
+ * 清除消息响应
+ */
+export interface AgentClearMessagesResponse {
+  deleted_count: number;
+
+  message: string;
+
+  success: boolean;
+
+  cutoff_timestamp?: string | null;
+
+  deleted_time_range?: { [key: string]: unknown } | null;
+
+  target_message?: { [key: string]: unknown } | null;
+}
+
 export type AgentGenerateMessageVoiceResponse = unknown;
 
 export type AgentGetMessagesResponse = unknown;
@@ -129,6 +166,14 @@ export namespace AgentUpdateSettingsResponse {
 
     message?: string;
   }
+}
+
+export interface AgentClearMessagesParams {
+  message_id?: number | null;
+
+  request_id?: string | null;
+
+  timestamp?: string | null;
 }
 
 export interface AgentGenerateMessageVoiceParams {
@@ -175,9 +220,11 @@ export interface AgentUpdateSettingsParams {
 export declare namespace Agents {
   export {
     type ChatSettings as ChatSettings,
+    type AgentClearMessagesResponse as AgentClearMessagesResponse,
     type AgentGenerateMessageVoiceResponse as AgentGenerateMessageVoiceResponse,
     type AgentGetMessagesResponse as AgentGetMessagesResponse,
     type AgentUpdateSettingsResponse as AgentUpdateSettingsResponse,
+    type AgentClearMessagesParams as AgentClearMessagesParams,
     type AgentGenerateMessageVoiceParams as AgentGenerateMessageVoiceParams,
     type AgentGetMessagesParams as AgentGetMessagesParams,
     type AgentUpdateSettingsParams as AgentUpdateSettingsParams,
