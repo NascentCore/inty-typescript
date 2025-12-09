@@ -4,6 +4,8 @@ import { APIResource } from '../../../../core/resource';
 import * as ReportAPI from '../report';
 import * as AgentsAPI from './agents';
 import {
+  AgentClearMessagesParams,
+  AgentClearMessagesResponse,
   AgentGenerateMessageVoiceParams,
   AgentGenerateMessageVoiceResponse,
   AgentGetMessagesParams,
@@ -264,9 +266,11 @@ export declare namespace Chats {
   export {
     Agents as Agents,
     type ChatSettings as ChatSettings,
+    type AgentClearMessagesResponse as AgentClearMessagesResponse,
     type AgentGenerateMessageVoiceResponse as AgentGenerateMessageVoiceResponse,
     type AgentGetMessagesResponse as AgentGetMessagesResponse,
     type AgentUpdateSettingsResponse as AgentUpdateSettingsResponse,
+    type AgentClearMessagesParams as AgentClearMessagesParams,
     type AgentGenerateMessageVoiceParams as AgentGenerateMessageVoiceParams,
     type AgentGetMessagesParams as AgentGetMessagesParams,
     type AgentUpdateSettingsParams as AgentUpdateSettingsParams,

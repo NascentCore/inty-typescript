@@ -135,7 +135,6 @@ Types:
 - <code><a href="./src/resources/api/v1/subscription/subscription.ts">UserSubscription</a></code>
 - <code><a href="./src/resources/api/v1/subscription/subscription.ts">SubscriptionListPlansResponse</a></code>
 - <code><a href="./src/resources/api/v1/subscription/subscription.ts">SubscriptionVerifyResponse</a></code>
-- <code><a href="./src/resources/api/v1/subscription/subscription.ts">SubscriptionWebhookResponse</a></code>
 
 Methods:
 
@@ -143,7 +142,6 @@ Methods:
 - <code title="get /api/v1/subscription/usage">client.api.v1.subscription.<a href="./src/resources/api/v1/subscription/subscription.ts">getUsage</a>() -> APIResponseUsageStatistics</code>
 - <code title="get /api/v1/subscription/plans">client.api.v1.subscription.<a href="./src/resources/api/v1/subscription/subscription.ts">listPlans</a>() -> SubscriptionListPlansResponse</code>
 - <code title="post /api/v1/subscription/verify">client.api.v1.subscription.<a href="./src/resources/api/v1/subscription/subscription.ts">verify</a>({ ...params }) -> SubscriptionVerifyResponse</code>
-- <code title="post /api/v1/subscription/webhook">client.api.v1.subscription.<a href="./src/resources/api/v1/subscription/subscription.ts">webhook</a>() -> SubscriptionWebhookResponse</code>
 
 #### Admin
 
@@ -187,12 +185,14 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/api/v1/chats/agents.ts">ChatSettings</a></code>
+- <code><a href="./src/resources/api/v1/chats/agents.ts">AgentClearMessagesResponse</a></code>
 - <code><a href="./src/resources/api/v1/chats/agents.ts">AgentGenerateMessageVoiceResponse</a></code>
 - <code><a href="./src/resources/api/v1/chats/agents.ts">AgentGetMessagesResponse</a></code>
 - <code><a href="./src/resources/api/v1/chats/agents.ts">AgentUpdateSettingsResponse</a></code>
 
 Methods:
 
+- <code title="post /api/v1/chats/agents/{agent_id}/clear-messages">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">clearMessages</a>(agentID, { ...params }) -> AgentClearMessagesResponse</code>
 - <code title="post /api/v1/chats/agents/{agent_id}/messages/{message_id}/voice">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">generateMessageVoice</a>(messageID, { ...params }) -> unknown</code>
 - <code title="get /api/v1/chats/agents/{agent_id}/messages">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">getMessages</a>(agentID, { ...params }) -> unknown</code>
 - <code title="get /api/v1/chats/agents/{agent_id}/settings">client.api.v1.chats.agents.<a href="./src/resources/api/v1/chats/agents.ts">getSettings</a>(agentID) -> ChatSettings</code>

@@ -42,7 +42,6 @@ import {
   SubscriptionListPlansResponse,
   SubscriptionVerifyParams,
   SubscriptionVerifyResponse,
-  SubscriptionWebhookResponse,
   UserSubscription,
 } from './subscription/subscription';
 import * as UsersAPI from './users/users';
@@ -216,7 +215,6 @@ export declare namespace V1 {
     type UserSubscription as UserSubscription,
     type SubscriptionListPlansResponse as SubscriptionListPlansResponse,
     type SubscriptionVerifyResponse as SubscriptionVerifyResponse,
-    type SubscriptionWebhookResponse as SubscriptionWebhookResponse,
     type SubscriptionVerifyParams as SubscriptionVerifyParams,
   };
 
