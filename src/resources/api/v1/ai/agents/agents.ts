@@ -507,6 +507,11 @@ export interface AgentUpdateParams {
 
   creator_notes?: string | null;
 
+  /**
+   * 需要新增的能量点数，会累加到 agent 的积分列中
+   */
+  energy_points?: number | null;
+
   extensions?: { [key: string]: unknown } | null;
 
   gender?: string | null;

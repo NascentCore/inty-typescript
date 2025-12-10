@@ -49,6 +49,8 @@ export interface User {
 
   readable_id: string;
 
+  actions?: Array<User.Action>;
+
   age_group?: string | null;
 
   avatar?: string | null;
@@ -79,6 +81,20 @@ export interface User {
   total_public_agents_follows?: number | null;
 
   updated_at?: string | null;
+}
+
+export namespace User {
+  /**
+   * 用户行动项
+   */
+  export interface Action {
+    enabled: boolean;
+
+    /**
+     * 用户行动类型枚举
+     */
+    type: 'request_feedback';
+  }
 }
 
 export interface ProfileUpdateResponse {
