@@ -3,9 +3,11 @@
 export {
   Agents,
   type ChatSettings,
+  type AgentClearMessagesResponse,
   type AgentGenerateMessageVoiceResponse,
   type AgentGetMessagesResponse,
   type AgentUpdateSettingsResponse,
+  type AgentClearMessagesParams,
   type AgentGenerateMessageVoiceParams,
   type AgentGetMessagesParams,
   type AgentUpdateSettingsParams,

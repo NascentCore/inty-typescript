@@ -183,6 +183,11 @@ export interface Agent {
 
   deleted_at?: number | null;
 
+  /**
+   * Agent 当前能量点数，对应数据库 points 列
+   */
+  energy_points?: number;
+
   extensions?: { [key: string]: unknown } | null;
 
   follower_count?: number;
@@ -506,6 +511,11 @@ export interface AgentUpdateParams {
   character_version?: string | null;
 
   creator_notes?: string | null;
+
+  /**
+   * 需要新增的能量点数，会累加到 agent 的积分列中
+   */
+  energy_points?: number | null;
 
   extensions?: { [key: string]: unknown } | null;
 

@@ -68,16 +68,4 @@ describe('resource subscription', () => {
       request_id: 'request_id',
     });
   });
-
-  // Prism tests are disabled
-  test.skip('webhook', async () => {
-    const responsePromise = client.api.v1.subscription.webhook();
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
 });

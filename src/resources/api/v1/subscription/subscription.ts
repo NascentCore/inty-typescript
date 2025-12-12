@@ -63,18 +63,6 @@ export class Subscription extends APIResource {
   verify(body: SubscriptionVerifyParams, options?: RequestOptions): APIPromise<SubscriptionVerifyResponse> {
     return this._client.post('/api/v1/subscription/verify', { body, ...options });
   }
-
-  /**
-   * Google Play Developer Notifications webhook 处理订阅状态变化通知
-   *
-   * @example
-   * ```ts
-   * const response = await client.api.v1.subscription.webhook();
-   * ```
-   */
-  webhook(options?: RequestOptions): APIPromise<SubscriptionWebhookResponse> {
-    return this._client.post('/api/v1/subscription/webhook', options);
-  }
 }
 
 export interface APIResponseSubscriptionStatus {
@@ -706,8 +694,6 @@ export namespace SubscriptionVerifyResponse {
   }
 }
 
-export type SubscriptionWebhookResponse = { [key: string]: string };
-
 export interface SubscriptionVerifyParams {
   /**
    * 产品 ID
@@ -736,7 +722,6 @@ export declare namespace Subscription {
     type UserSubscription as UserSubscription,
     type SubscriptionListPlansResponse as SubscriptionListPlansResponse,
     type SubscriptionVerifyResponse as SubscriptionVerifyResponse,
-    type SubscriptionWebhookResponse as SubscriptionWebhookResponse,
     type SubscriptionVerifyParams as SubscriptionVerifyParams,
   };
 
