@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.29.1 (2025-12-20)
+
+Full Changelog: [v0.29.0...v0.29.1](https://github.com/NascentCore/inty-typescript/compare/v0.29.0...v0.29.1)
+
+### Chores
+
+* **internal:** codegen related update ([77600fc](https://github.com/NascentCore/inty-typescript/commit/77600fcf8708edf456890ad9060cd8dcfa427045))
+
 ## 0.29.0 (2025-12-12)
 
 Full Changelog: [v0.28.0...v0.29.0](https://github.com/NascentCore/inty-typescript/compare/v0.28.0...v0.29.0)
