@@ -25,7 +25,11 @@ describe('resource v1', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.api.v1.listNotifications(
-        { is_read: true, page: 0, page_size: 0 },
+        {
+          is_read: true,
+          page: 0,
+          page_size: 0,
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Inty.NotFoundError);

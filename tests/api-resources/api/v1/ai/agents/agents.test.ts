@@ -140,7 +140,12 @@ describe('resource agents', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.api.v1.ai.agents.recommend(
-        { page: 1, page_size: 1, sort: 'created_asc', sort_seed: 'sort_seed' },
+        {
+          page: 1,
+          page_size: 1,
+          sort: 'created_asc',
+          sort_seed: 'sort_seed',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Inty.NotFoundError);
@@ -160,6 +165,10 @@ describe('resource agents', () => {
 
   // Prism tests are disabled
   test.skip('search: required and optional params', async () => {
-    const response = await client.api.v1.ai.agents.search({ q: 'q', page: 1, page_size: 1 });
+    const response = await client.api.v1.ai.agents.search({
+      q: 'q',
+      page: 1,
+      page_size: 1,
+    });
   });
 });
