@@ -25,7 +25,11 @@ describe('resource characterThemes', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.api.v1.characterThemes.list(
-        { include_hidden: true, limit: 1, skip: 0 },
+        {
+          include_hidden: true,
+          limit: 1,
+          skip: 0,
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Inty.NotFoundError);
