@@ -100,6 +100,7 @@ describe('resource chats', () => {
     const response = await client.api.v1.chats.generateImage('agent_id', {
       message_id: 0,
       history_count: 0,
+      model: 'model',
       request_id: 'request_id',
     });
   });

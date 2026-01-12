@@ -60,7 +60,11 @@ describe('resource agents', () => {
     await expect(
       client.api.v1.chats.agents.getMessages(
         'agent_id',
-        { limit: 1, offset: 0, order: 'desc' },
+        {
+          limit: 1,
+          offset: 0,
+          order: 'desc',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Inty.NotFoundError);

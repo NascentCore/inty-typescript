@@ -179,6 +179,10 @@ export namespace ChatGenerateImageResponse {
     message_id: number;
 
     prompt: string;
+
+    generation_time_ms?: number | null;
+
+    model?: string | null;
   }
 
   export interface UsageLimitExceeded {
@@ -245,6 +249,8 @@ export interface ChatGenerateImageParams {
   message_id: number;
 
   history_count?: number | null;
+
+  model?: string | null;
 
   request_id?: string | null;
 }

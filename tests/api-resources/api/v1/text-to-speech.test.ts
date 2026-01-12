@@ -25,7 +25,13 @@ describe('resource textToSpeech', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.api.v1.textToSpeech.listVoices(
-        { category: 'category', page_size: 1, search: 'search', voice_type: 'voice_type' },
+        {
+          category: 'category',
+          page_size: 1,
+          provider: 'provider',
+          search: 'search',
+          voice_type: 'voice_type',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Inty.NotFoundError);
