@@ -81,6 +81,8 @@ export interface User {
   total_public_agents_follows?: number | null;
 
   updated_at?: string | null;
+
+  user_photo?: string | null;
 }
 
 export namespace User {
@@ -140,6 +142,8 @@ export interface ProfileUpdateParams {
   request_id?: string | null;
 
   system_language?: string | null;
+
+  user_photo?: string | null;
 }
 
 export declare namespace Profile {

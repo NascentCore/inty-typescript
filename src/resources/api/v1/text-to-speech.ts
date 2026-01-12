@@ -6,7 +6,7 @@ import { RequestOptions } from '../../../internal/request-options';
 
 export class TextToSpeech extends APIResource {
   /**
-   * 获取 ElevenLabs 可用音色列表，支持搜索和过滤功能
+   * 获取可用音色列表（包含 Gemini TTS 和 ElevenLabs），支持搜索和过滤功能
    *
    * @example
    * ```ts
@@ -26,7 +26,7 @@ export type TextToSpeechListVoicesResponse = Array<{ [key: string]: unknown }>;
 
 export interface TextToSpeechListVoicesParams {
   /**
-   * 音色分类过滤 (如: premade, cloned)
+   * 音色分类过滤 (如: prebuilt, premade, cloned)
    */
   category?: string | null;
 
@@ -36,12 +36,17 @@ export interface TextToSpeechListVoicesParams {
   page_size?: number | null;
 
   /**
+   * TTS 服务提供商过滤 ("gemini" 或 "elevenlabs"，不传则返回所有)
+   */
+  provider?: string | null;
+
+  /**
    * 搜索音色名称关键词
    */
   search?: string | null;
 
   /**
-   * 音色类型过滤 (如: personal, community)
+   * 音色类型过滤 (如: personal, preset)
    */
   voice_type?: string | null;
 }
