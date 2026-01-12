@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.30.0 (2026-01-12)
+
+Full Changelog: [v0.29.0...v0.30.0](https://github.com/NascentCore/inty-typescript/compare/v0.29.0...v0.30.0)
+
+### Features
+
+* **api:** manual updates ([3295d56](https://github.com/NascentCore/inty-typescript/commit/3295d5647648bbfbc280282658c6f19a5086e555))
+
+
+### Chores
+
+* break long lines in snippets into multiline ([eb8f362](https://github.com/NascentCore/inty-typescript/commit/eb8f3625c128d0389db40816026f9852cb212bd6))
+* **internal:** codegen related update ([1b09b03](https://github.com/NascentCore/inty-typescript/commit/1b09b03a248f53ac80577766a8ef0f6d5ffc7600))
+* **internal:** codegen related update ([77600fc](https://github.com/NascentCore/inty-typescript/commit/77600fcf8708edf456890ad9060cd8dcfa427045))
+
 ## 0.29.0 (2025-12-12)
 
 Full Changelog: [v0.28.0...v0.29.0](https://github.com/NascentCore/inty-typescript/compare/v0.28.0...v0.29.0)
