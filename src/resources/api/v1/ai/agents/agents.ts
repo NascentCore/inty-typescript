@@ -556,6 +556,11 @@ export interface AgentUpdateParams {
    */
   prompt?: string | null;
 
+  /**
+   * 是否替换 background_images 列表。为 True 时完全替换，为 False 或 None 时追加
+   */
+  replace_background_images?: boolean | null;
+
   request_id?: string | null;
 
   scenario?: string | null;

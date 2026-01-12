@@ -28,6 +28,7 @@ describe('resource textToSpeech', () => {
         {
           category: 'category',
           page_size: 1,
+          provider: 'provider',
           search: 'search',
           voice_type: 'voice_type',
         },
