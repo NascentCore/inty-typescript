@@ -61,6 +61,7 @@ describe('resource agents', () => {
       request_id: 'request_id',
       scenario: 'scenario',
       settings: { foo: 'bar' },
+      source: 'USER_CREATED',
       tags: ['string'],
       visibility: 'PUBLIC',
       voice_id: 'voice_id',

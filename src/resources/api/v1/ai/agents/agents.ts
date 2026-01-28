@@ -248,11 +248,14 @@ export interface Agent {
 
   settings?: { [key: string]: unknown } | null;
 
+  /**
+   * AI 角色来源
+   */
+  source?: 'USER_CREATED' | 'AUTO_GENERATED' | null;
+
   tags?: Array<string> | null;
 
   updated_at?: number | null;
-
-  user?: string | null;
 
   /**
    * AI 角色可见性
@@ -481,6 +484,11 @@ export interface AgentCreateParams {
 
   settings?: { [key: string]: unknown } | null;
 
+  /**
+   * AI 角色来源
+   */
+  source?: 'USER_CREATED' | 'AUTO_GENERATED' | null;
+
   tags?: Array<string> | null;
 
   /**
@@ -566,6 +574,11 @@ export interface AgentUpdateParams {
   scenario?: string | null;
 
   settings?: { [key: string]: unknown } | null;
+
+  /**
+   * AI 角色来源
+   */
+  source?: 'USER_CREATED' | 'AUTO_GENERATED' | null;
 
   tags?: Array<string> | null;
 
