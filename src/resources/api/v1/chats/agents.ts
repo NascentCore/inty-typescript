@@ -178,7 +178,7 @@ export interface AgentClearMessagesParams {
 
 export interface AgentGenerateMessageVoiceParams {
   /**
-   * Path param:
+   * Path param
    */
   agent_id: string;
 
