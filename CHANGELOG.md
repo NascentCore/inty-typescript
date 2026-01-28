@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.31.0 (2026-01-28)
+
+Full Changelog: [v0.30.0...v0.31.0](https://github.com/NascentCore/inty-typescript/compare/v0.30.0...v0.31.0)
+
+### Features
+
+* Feat/return user message ([88d8624](https://github.com/NascentCore/inty-typescript/commit/88d8624c8a4c497fd56d6bd1762816f3746d1f1b))
+
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([b025f6a](https://github.com/NascentCore/inty-typescript/commit/b025f6ae8483b9a6287c3fe4b67640c07b08eef6))
+* fix typo in descriptions ([14bd8de](https://github.com/NascentCore/inty-typescript/commit/14bd8de9c6e72bf60400022653c41472855ac79b))
+* **internal:** update `actions/checkout` version ([29fc57e](https://github.com/NascentCore/inty-typescript/commit/29fc57eebb6df267b2f865ad837b07887444586c))
+* **internal:** upgrade babel, qs, js-yaml ([0b3f392](https://github.com/NascentCore/inty-typescript/commit/0b3f3925d405971d3ffaa29744f17b09c2bd6871))
+
 ## 0.30.0 (2026-01-12)
 
 Full Changelog: [v0.29.0...v0.30.0](https://github.com/NascentCore/inty-typescript/compare/v0.29.0...v0.30.0)
