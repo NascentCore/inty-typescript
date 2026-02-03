@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.31.1 (2026-02-03)
+
+Full Changelog: [v0.31.0...v0.31.1](https://github.com/NascentCore/inty-typescript/compare/v0.31.0...v0.31.1)
+
+### Bug Fixes
+
+* **client:** avoid memory leak with abort signals ([233c46f](https://github.com/NascentCore/inty-typescript/commit/233c46f375adf2a41bda9e100b198b1cb4b68d98))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([fb050aa](https://github.com/NascentCore/inty-typescript/commit/fb050aa217739fab7e4d9617251f7c93d820912e))
+
 ## 0.31.0 (2026-01-28)
 
 Full Changelog: [v0.30.0...v0.31.0](https://github.com/NascentCore/inty-typescript/compare/v0.30.0...v0.31.0)
