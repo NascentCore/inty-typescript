@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.31.2 (2026-02-06)
+
+Full Changelog: [v0.31.1...v0.31.2](https://github.com/NascentCore/inty-typescript/compare/v0.31.1...v0.31.2)
+
+### Bug Fixes
+
+* **client:** avoid removing abort listener too early ([53a8bf0](https://github.com/NascentCore/inty-typescript/commit/53a8bf047ca9d4e6e3a14748dc9fb01f5eeb1413))
+
+
+### Chores
+
+* **client:** restructure abort controller binding ([6765c58](https://github.com/NascentCore/inty-typescript/commit/6765c58e1ddbd45cc401c4103ebd7af99b17170c))
+
 ## 0.31.1 (2026-02-03)
 
 Full Changelog: [v0.31.0...v0.31.1](https://github.com/NascentCore/inty-typescript/compare/v0.31.0...v0.31.1)
