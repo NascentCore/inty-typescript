@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource v1', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listNotifications', async () => {
     const responsePromise = client.api.v1.listNotifications();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource v1', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listNotifications: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -35,7 +35,7 @@ describe('resource v1', () => {
     ).rejects.toThrow(Inty.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('uploadImage: only required params', async () => {
     const responsePromise = client.api.v1.uploadImage({
       file: await toFile(Buffer.from('# my file contents'), 'README.md'),
@@ -49,7 +49,7 @@ describe('resource v1', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('uploadImage: required and optional params', async () => {
     const response = await client.api.v1.uploadImage({
       file: await toFile(Buffer.from('# my file contents'), 'README.md'),

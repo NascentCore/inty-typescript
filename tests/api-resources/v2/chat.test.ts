@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource chat', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendMessage: only required params', async () => {
     const responsePromise = client.v2.chat.sendMessage('agent_id', {
       messages: [{ content: 'content', role: 'role' }],
@@ -22,7 +22,7 @@ describe('resource chat', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendMessage: required and optional params', async () => {
     const response = await client.v2.chat.sendMessage('agent_id', {
       messages: [{ content: 'content', role: 'role' }],

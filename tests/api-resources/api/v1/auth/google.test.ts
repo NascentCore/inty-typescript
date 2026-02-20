@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource google', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('login', async () => {
     const responsePromise = client.api.v1.auth.google.login({});
     const rawResponse = await responsePromise.asResponse();

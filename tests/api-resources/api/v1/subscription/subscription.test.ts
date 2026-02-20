@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource subscription', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getStatus', async () => {
     const responsePromise = client.api.v1.subscription.getStatus();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource subscription', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getUsage', async () => {
     const responsePromise = client.api.v1.subscription.getUsage();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource subscription', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listPlans', async () => {
     const responsePromise = client.api.v1.subscription.listPlans();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource subscription', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('verify: only required params', async () => {
     const responsePromise = client.api.v1.subscription.verify({
       product_id: 'product_id',
@@ -59,7 +59,7 @@ describe('resource subscription', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('verify: required and optional params', async () => {
     const response = await client.api.v1.subscription.verify({
       product_id: 'product_id',
