@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource auth', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createGuest', async () => {
     const responsePromise = client.api.v1.auth.createGuest({});
     const rawResponse = await responsePromise.asResponse();

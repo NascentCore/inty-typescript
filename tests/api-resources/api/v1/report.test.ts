@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource report', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.api.v1.report.create({ target_id: 'target_id', target_type: 'USER' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource report', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.api.v1.report.create({
       target_id: 'target_id',

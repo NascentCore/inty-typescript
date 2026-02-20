@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource users', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getSubscriptionStatus', async () => {
     const responsePromise = client.api.v1.subscription.admin.users.getSubscriptionStatus('user_id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getUsageStatistics', async () => {
     const responsePromise = client.api.v1.subscription.admin.users.getUsageStatistics('user_id');
     const rawResponse = await responsePromise.asResponse();
