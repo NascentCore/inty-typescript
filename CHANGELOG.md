@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.31.3 (2026-02-24)
+
+Full Changelog: [v0.31.2...v0.31.3](https://github.com/NascentCore/inty-typescript/compare/v0.31.2...v0.31.3)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([e54be6e](https://github.com/NascentCore/inty-typescript/commit/e54be6e5909e026608a69b97986b092f9e3c06dc))
+
+
+### Chores
+
+* **internal/client:** fix form-urlencoded requests ([0073035](https://github.com/NascentCore/inty-typescript/commit/007303591cbc39aa6458e6df5ce9c2c0f01468d1))
+* **internal:** avoid type checking errors with ts-reset ([b938335](https://github.com/NascentCore/inty-typescript/commit/b938335eacc511ccebe94955cf5dd91ce527976c))
+* **internal:** remove mock server code ([7b546bb](https://github.com/NascentCore/inty-typescript/commit/7b546bb481a9245f94361fa7fea2efdffa9fb6c7))
+* update mock server docs ([a973595](https://github.com/NascentCore/inty-typescript/commit/a973595752ac48c7fee35832f573386358dc7d92))
+
 ## 0.31.2 (2026-02-06)
 
 Full Changelog: [v0.31.1...v0.31.2](https://github.com/NascentCore/inty-typescript/compare/v0.31.1...v0.31.2)
