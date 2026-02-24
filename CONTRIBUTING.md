@@ -60,7 +60,7 @@ $ yarn link inty
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global inty
+$ pnpm link --global inty
 ```
 
 ## Running tests
