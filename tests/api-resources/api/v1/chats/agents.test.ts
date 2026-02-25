@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource agents', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('clearMessages', async () => {
     const responsePromise = client.api.v1.chats.agents.clearMessages('agent_id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource agents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('generateMessageVoice: only required params', async () => {
     const responsePromise = client.api.v1.chats.agents.generateMessageVoice('message_id', {
       agent_id: 'agent_id',
@@ -34,7 +34,7 @@ describe('resource agents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('generateMessageVoice: required and optional params', async () => {
     const response = await client.api.v1.chats.agents.generateMessageVoice('message_id', {
       agent_id: 'agent_id',
@@ -42,7 +42,7 @@ describe('resource agents', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getMessages', async () => {
     const responsePromise = client.api.v1.chats.agents.getMessages('agent_id');
     const rawResponse = await responsePromise.asResponse();
@@ -54,7 +54,7 @@ describe('resource agents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getMessages: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -70,7 +70,7 @@ describe('resource agents', () => {
     ).rejects.toThrow(Inty.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getSettings', async () => {
     const responsePromise = client.api.v1.chats.agents.getSettings('agent_id');
     const rawResponse = await responsePromise.asResponse();
@@ -82,7 +82,7 @@ describe('resource agents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateSettings', async () => {
     const responsePromise = client.api.v1.chats.agents.updateSettings('agent_id', {});
     const rawResponse = await responsePromise.asResponse();

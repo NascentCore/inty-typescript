@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource deletion', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkEligibility', async () => {
     const responsePromise = client.api.v1.users.deletion.checkEligibility();
     const rawResponse = await responsePromise.asResponse();

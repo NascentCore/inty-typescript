@@ -8,7 +8,7 @@ const client = new Inty({
 });
 
 describe('resource profile', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.api.v1.users.profile.update({});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource profile', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('me', async () => {
     const responsePromise = client.api.v1.users.profile.me();
     const rawResponse = await responsePromise.asResponse();
