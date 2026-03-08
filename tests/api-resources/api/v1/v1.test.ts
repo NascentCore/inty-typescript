@@ -38,7 +38,7 @@ describe('resource v1', () => {
   // Mock server tests are disabled
   test.skip('uploadImage: only required params', async () => {
     const responsePromise = client.api.v1.uploadImage({
-      file: await toFile(Buffer.from('# my file contents'), 'README.md'),
+      file: await toFile(Buffer.from('Example data'), 'README.md'),
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -52,7 +52,7 @@ describe('resource v1', () => {
   // Mock server tests are disabled
   test.skip('uploadImage: required and optional params', async () => {
     const response = await client.api.v1.uploadImage({
-      file: await toFile(Buffer.from('# my file contents'), 'README.md'),
+      file: await toFile(Buffer.from('Example data'), 'README.md'),
       cropping_avatar: true,
     });
   });

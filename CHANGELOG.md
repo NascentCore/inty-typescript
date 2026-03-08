@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.31.4 (2026-03-08)
+
+Full Changelog: [v0.31.3...v0.31.4](https://github.com/NascentCore/inty-typescript/compare/v0.31.3...v0.31.4)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([a95567a](https://github.com/NascentCore/inty-typescript/commit/a95567a16e01b9e941eca946bfa29568450dab57))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([b693f79](https://github.com/NascentCore/inty-typescript/commit/b693f7981a3b93ae6060ecc721628b3b00b1f4f2))
+* **internal:** codegen related update ([b883497](https://github.com/NascentCore/inty-typescript/commit/b88349772352e70613d525e51c52d82f2bd4ca7e))
+* **internal:** move stringifyQuery implementation to internal function ([4d76ddc](https://github.com/NascentCore/inty-typescript/commit/4d76ddc492932d8f18565645774088ac06cd6fa7))
+* update placeholder string ([1d21986](https://github.com/NascentCore/inty-typescript/commit/1d219865620b1b4a4f37b20c781ac1d18dac24a8))
+
 ## 0.31.3 (2026-02-24)
 
 Full Changelog: [v0.31.2...v0.31.3](https://github.com/NascentCore/inty-typescript/compare/v0.31.2...v0.31.3)
