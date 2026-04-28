@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.32.0 (2026-04-28)
+
+Full Changelog: [v0.31.4...v0.32.0](https://github.com/NascentCore/inty-typescript/compare/v0.31.4...v0.32.0)
+
+### Features
+
+* support setting headers via env ([f4a62f7](https://github.com/NascentCore/inty-typescript/commit/f4a62f7cb44929bfd99a229061c898b13e52f51f))
+
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([dd6a81d](https://github.com/NascentCore/inty-typescript/commit/dd6a81d7d105454a071bb119f46bb09d376fa8f0))
+* **internal:** codegen related update ([03752f7](https://github.com/NascentCore/inty-typescript/commit/03752f7da846ca3b02358e3f04bbb3bf9a339997))
+* **internal:** codegen related update ([25d5b15](https://github.com/NascentCore/inty-typescript/commit/25d5b15d49175b36b9871895a741857abd377165))
+* **internal:** codegen related update ([1ea9855](https://github.com/NascentCore/inty-typescript/commit/1ea9855da472ddaa6db60198a9fe6c4693e2edea))
+* **internal:** codegen related update ([73fbe58](https://github.com/NascentCore/inty-typescript/commit/73fbe583cb533a945d07d49b4d71f6d0336bdd12))
+* **internal:** more robust bootstrap script ([cde446d](https://github.com/NascentCore/inty-typescript/commit/cde446d597cb00824a9b8c54b169d9cd8bf84bfe))
+* **internal:** tweak CI branches ([d128b76](https://github.com/NascentCore/inty-typescript/commit/d128b7691fb4b37b8e17c4677c4d0a38036c0082))
+* **internal:** update dependencies to address dependabot vulnerabilities ([1d87919](https://github.com/NascentCore/inty-typescript/commit/1d87919f8e948b0920548489cebed3c4ce2b34ee))
+* **internal:** update gitignore ([6294fe9](https://github.com/NascentCore/inty-typescript/commit/6294fe95af6f8f4609b9ebd5643ea497d77e9a61))
+
 ## 0.31.4 (2026-03-08)
 
 Full Changelog: [v0.31.3...v0.31.4](https://github.com/NascentCore/inty-typescript/compare/v0.31.3...v0.31.4)
