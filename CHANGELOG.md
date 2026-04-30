@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.32.1 (2026-04-30)
+
+Full Changelog: [v0.32.0...v0.32.1](https://github.com/NascentCore/inty-typescript/compare/v0.32.0...v0.32.1)
+
+### Chores
+
+* **format:** run eslint and prettier separately ([1b854a3](https://github.com/NascentCore/inty-typescript/commit/1b854a3d0f8077c1a867e926525120ddc98f8725))
+
 ## 0.32.0 (2026-04-28)
 
 Full Changelog: [v0.31.4...v0.32.0](https://github.com/NascentCore/inty-typescript/compare/v0.31.4...v0.32.0)
